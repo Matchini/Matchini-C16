@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const Nav=()=> {
-    return (
-        <div className="bg-yellow-100">
-            <p>Hello</p>
-        </div>
-    )
-}
+const Nav = () => {
+  return (
+    <div>
+      <p className="bg-green-100 justify-items-center">Hello</p>
+    </div>
+  );
+};
 
-export default Nav
+export default Nav;
