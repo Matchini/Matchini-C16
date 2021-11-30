@@ -2,7 +2,7 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div class=" w-96 mr-48 mt-12 bg-no-repeat bg-cover bg-center">
+    <div class=" w-full mr-96 mt-12 bg-no-repeat bg-cover bg-center">
       <div class="flex justify-end">
         <div class="bg-white  mt-12 w-1/2 flex justify-center items-center">
           <div>
