@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   width: 100%;
@@ -11,8 +15,7 @@ body {
   letter-spacing: 1px;
   font-size: 15px;
 }
-body .wrap-body {
-}
+
 .top {
   background: #ffcd02;
   color: #333;
@@ -57,8 +60,6 @@ Author URI: https://www.zerotheme.com/
   float: left !important;
 }
 
-.zerogrid .row {
-}
 .zerogrid .row:before,
 .row:after {
   content: "\0020";
