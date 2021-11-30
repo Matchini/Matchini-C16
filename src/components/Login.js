@@ -2,25 +2,14 @@ import React from "react";
 
 const Login = () => {
   return (
-    <div class="min-h-screen bg-no-repeat bg-cover bg-center">
+    <div class=" mt-12 bg-no-repeat bg-cover bg-center">
       <div class="flex justify-end">
-        <div class="bg-white min-h-screen w-1/2 flex justify-center items-center">
+        <div class="bg-white  mt-12 w-1/2 flex justify-center items-center">
           <div>
             <div>
               <div>
                 <span class="text-sm text-gray-900">Welcome back</span>
                 <h1 class="text-2xl font-bold">Login to your account</h1>
-              </div>
-              <div class="mt-5">
-                <label class="block text-md mb-2" for="password">
-                  Password
-                </label>
-                <input
-                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                />
               </div>
               <div class="my-3">
                 <label class="block text-md mb-2" for="email">
@@ -30,9 +19,21 @@ const Login = () => {
                   class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
                   type="email"
                   name="password"
-                  placeholder="email"
+                  placeholder="write your email here"
                 />
               </div>
+              <div class="mt-5">
+                <label class="block text-md mb-2" for="password">
+                  Password
+                </label>
+                <input
+                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  type="password"
+                  name="password"
+                  placeholder="password here ..."
+                />
+              </div>
+
               <div class="flex justify-between">
                 <div>
                   <input
