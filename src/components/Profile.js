@@ -5,12 +5,14 @@ const Profile = (props) => {
     <div class="flex items-center h-screen w-full justify-center">
       <div class="max-w-xs">
         <div class="bg-white shadow-xl rounded-lg py-3">
-          <button onClick={props.close}>X</button>
+          <button onClick={props.close}>
+          <img alt="exit" src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/48/000000/external-exit-wayfinding-those-icons-lineal-color-those-icons.png"/>
+          </button>
           <div class="photo-wrapper p-2">
             <img
               class="w-32 h-32 rounded-full mx-auto"
-              src="../../Assets/slim.jpeg"
-              alt="Slim"
+              src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp"
+              alt="John Doe"
             />
           </div>
           <div class="p-2">
@@ -36,6 +38,14 @@ const Profile = (props) => {
                 </tr>
               </tbody>
             </table>
+            <div class="text-center my-3">
+              <a
+                class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
+                href="/"
+              >
+                Edit Profile
+              </a>
+            </div>
           </div>
         </div>
       </div>

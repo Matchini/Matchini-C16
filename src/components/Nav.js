@@ -8,10 +8,9 @@ const Nav = () => {
   });
   return (
     <div className="bg-yellow-100">
-      <button onClick={open}>Profile</button>
-
+      <button onClick={open}>Profile here</button>
+   
       <Modal>
-       
         <Profile close={close} />
       </Modal>
     </div>
