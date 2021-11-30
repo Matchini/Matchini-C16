@@ -3,7 +3,7 @@ import React from 'react'
 const Nav=()=> {
     return (
         <div className="bg-yellow-100">
-            <p>Hello</p>
+            <p className="text-center">Hello</p>
         </div>
     )
 }
