@@ -1,65 +1,93 @@
 import React from "react";
-
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import Home from "./Home";
 const Register = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:3000/register", data)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    reset();
+  };
+
   return (
     <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
         <div class="bg-white mt-12 w-full justify-center items-center ">
           <div>
             <div>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div class="text-center">
                 <h1 class="text-2xl font-bold">Welcome to Matchini</h1>
               </div>
               <div class="my-5">
                 <label class="block text-md" for="email">
-                  Full Name
+                  FirstName
                 </label>
                 <input
-                  class="px-4 w-full py-2 rounded-md bg-gray-100 text-sm outline-none"
+                  className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
                   type="text"
-                  name="FullName"
-                  placeholder="write your full name here"
+                  name="FirstName"
+                  {...register("first_name")}
+                  placeholder="write your first name here"
                 />
               </div>
-              <div class="my-5">
-                <label class="block text-md" for="email">
-                  Email
-                </label>
-                <input
-                  class="px-4 w-full py-2 rounded-md bg-gray-100 text-sm outline-none"
-                  type="email"
-                  name="password"
-                  placeholder="write your email here"
-                />
-              </div>
-              <div class="mt-5">
-                <label class="block text-md" for="password">
-                  Password
-                </label>
-                <input
-                  class="px-4 w-full py-2 rounded-md bg-gray-100 text-sm outline-none"
-                  type="password"
-                  name="password"
-                  placeholder="password here ..."
-                />
-              </div>
-
-              <div class="flex justify-between">
-                <div class="mt-2">
+              <div className="my-3">
+                  <label className="block text-md mb-2" for="email">
+                    Last Name
+                  </label>
                   <input
-                    class="cursor-pointer"
-                    type="radio"
-                    name="rememberme"
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                    type="text"
+                    name="LastName"
+                    {...register("last_name")}
+                    placeholder="write your last name here"
                   />
-                  <span class="text-sm ml-3">Remember Me</span>
                 </div>
-                <span class="text-sm text-blue-700 mt-2 hover:underline cursor-pointer">
-                  Forgot password?
-                </span>
-              </div>
-              <div class="mt-8">
+                <div className="my-3">
+                  <label className="block text-md mb-2" for="email">
+                    Email
+                  </label>
+                  <input
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                    type="email"
+                    name="email"
+                    {...register("email")}
+                    placeholder="write your email here"
+                  />
+                </div>
+                <div className="mt-5">
+                  <label className="block text-md mb-2" for="password">
+                    Password
+                  </label>
+                  <input
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                    type="password"
+                    name="password"
+                    {...register("password")}
+                    placeholder="password here ..."
+                  />
+                </div>
+                <div className="my-3">
+                  <label className="block text-md mb-2" for="email">
+                    Phonenumber
+                  </label>
+                  <input
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                    type="phone"
+                    name="phonenumber"
+                    {...register("phonenumber")}
+                    placeholder="write your phone number here"
+                  />
+                </div>
               <div class="flex justify-center">
-                <button class=" mb-3 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+                <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
                   Create Account
                 </button>
                 </div>
@@ -78,7 +106,7 @@ const Register = () => {
                   />
                   <button>sign-up with google</button>
                 </div>
-              </div>
+              </form>
             </div>
            
           </div>

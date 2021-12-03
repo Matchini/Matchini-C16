@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 // import Nav from "./components/Nav";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 class App extends Component {
   render() {
     return (
@@ -12,7 +13,7 @@ class App extends Component {
           <Home />
           {/* <Nav /> */}
         </div>
-        {/* <div className="float-right">
+        {/* <div className="float-left">
           <Login />
         </div> */}
         <div className="col-start-1 col-end-3 h-max">
