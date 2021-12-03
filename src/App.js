@@ -13,14 +13,14 @@ class App extends Component {
           <Home />
           {/* <Nav /> */}
         </div>
-        {/* <div className="float-left">
-          <Login />
-        </div> */}
-        <div className="col-start-1 col-end-3 h-max">
-            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5894361.jpg"/>
-          </div>
-        <div className="col-start-3 col-end-5 ml-12 mr-12">      
+        <div className="col-start-1 col-end-3 ml-12 mr-12">
           <Register />
+        </div>
+        {/* <div className="col-start-1 col-end-3 h-max">
+            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5894361.jpg"/>
+          </div> */}
+        <div className="col-start-3 col-end-5 ml-12 mr-12">      
+          <Login />
         </div>
       </div>
     );
