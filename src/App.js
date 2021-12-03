@@ -8,18 +8,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      // <div>
-      //   <div>
-      //     <Home />
-      //     {/* <Nav /> */}
-      //   </div>
-      //   <div className="float-right">
-      //     <Login />
-      //   </div>
-      //   <div className="float-left">
-      //     <Register />
-      //   </div>
-      // </div>
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
