@@ -1,8 +1,8 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useNavigate } from "react-hook-form";
 import axios from "axios";
-
 const Login = () => {
+  // const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
@@ -13,6 +13,7 @@ const Login = () => {
       .catch((err) => {
         console.log(err);
       });
+    // navigate("/LandingPage");
   };
   return (
     <div className=" w-full mr-96 mt-12 bg-no-repeat bg-cover bg-center">
