@@ -1,18 +1,19 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import axios from 'axios'
+import axios from "axios";
 const Register = () => {
-    const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-      axios.post('http://localhost:5000/register',data)
-      .then((resultat)=>{
-        console.log(resultat) 
-        })
-      .catch((err)=>{
-        console.log(err)
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:3000/register", data)
+      .then((res) => {
+        console.log(res.data);
       })
-    };
-
+      .catch((err) => {
+        console.log(err);
+      });
+    reset();
+  };
 
   return (
     <div className="w-full mr-64 mt-12 bg-no-repeat bg-cover bg-center">
@@ -23,7 +24,7 @@ const Register = () => {
               <div>
                 <h1 className="text-2xl font-bold">Register to your account</h1>
               </div>
-            
+
               <div className="my-3">
                 <label className="block text-md mb-2" for="email">
                   First Name
@@ -60,7 +61,7 @@ const Register = () => {
                   placeholder="write your email here"
                 />
               </div>
-             
+
               <div className="mt-5">
                 <label className="block text-md mb-2" for="password">
                   Password
@@ -85,7 +86,7 @@ const Register = () => {
                   placeholder="write your phone number here"
                 />
               </div>
-  
+
               <div className="flex justify-between">
                 <div>
                   <input
@@ -100,7 +101,10 @@ const Register = () => {
                 </span>
               </div>
               <div className="">
-                <button className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100" type="submit">
+                <button
+                  className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
+                  type="submit"
+                >
                   Register now
                 </button>
                 <div className="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
