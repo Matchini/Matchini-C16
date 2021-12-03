@@ -1,4 +1,6 @@
 import React from "react";
+import Login from "./Login";
+import Register from "./Register";
 
 const Home = () => {
   return (
@@ -25,6 +27,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      louled hedhi fergha ama routes yemchiw baddel m link /login & /register
+      taw yemchiw ! 5ater heni bech yestaylehom bel wa7da bel wa7da w ba3ed
+      y7othom f jnab b3adhhom w style w kadhe ! tsarfou louled tfannou chwaya
+      maghir ma tes2lou :p
     </div>
   );
 };
