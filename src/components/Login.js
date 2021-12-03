@@ -1,19 +1,19 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import axios from 'axios'
+import axios from "axios";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-    const onSubmit = (data) => {
-      axios.post('http://localhost:5000/login',data)
-      .then((resultat)=>{
-        
-        console.log(resultat) 
-        })
-      .catch((err)=>{
-        console.log(err)
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:3000/login", data)
+      .then((res) => {
+        console.log(res.data);
       })
-    };
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className=" w-full mr-96 mt-12 bg-no-repeat bg-cover bg-center">
       <div className="flex justify-end">
@@ -63,7 +63,10 @@ const Login = () => {
                 </span>
               </div>
               <div className="">
-                <button className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100" type="submit">
+                <button
+                  className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
+                  type="submit"
+                >
                   Login now
                 </button>
                 <div className="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
