@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Nav from "./components/Nav";
+// import UpdateProfile from "./components/UpdateProfile"
 class App extends Component {
   render() {
     return (
@@ -17,6 +18,7 @@ class App extends Component {
         </div>
         <div className="float-left">
           <Register />
+          {/* <UpdateProfile /> */}
         </div>
       </div>
     );
