@@ -17,37 +17,33 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <Home />
-      <div className="w-full mr-64 mt-12 bg-no-repeat bg-cover bg-center">
-        <div className="flex justify-end">
-          <div className="bg-white  mt-12 w-1/2 flex justify-center items-center">
+    <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+      <div>
+        <div class="bg-white mt-12 w-full justify-center items-center ">
+          <div>
             <div>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <div>
-                  <h1 className="text-2xl font-bold">
-                    Register to your account
-                  </h1>
-                </div>
-
-                <div className="my-3">
-                  <label className="block text-md mb-2" for="email">
-                    First Name
-                  </label>
-                  <input
-                    className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
-                    type="text"
-                    name="FirstName"
-                    {...register("first_name")}
-                    placeholder="write your first name here"
-                  />
-                </div>
-                <div className="my-3">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div class="text-center">
+                <h1 class="text-2xl font-bold">Welcome to Matchini</h1>
+              </div>
+              <div class="my-5">
+                <label class="block text-md" for="email">
+                  FirstName
+                </label>
+                <input
+                  className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                  type="text"
+                  name="FirstName"
+                  {...register("first_name")}
+                  placeholder="write your first name here"
+                />
+              </div>
+              <div className="my-3">
                   <label className="block text-md mb-2" for="email">
                     Last Name
                   </label>
                   <input
-                    className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
                     type="text"
                     name="LastName"
                     {...register("last_name")}
@@ -59,20 +55,19 @@ const Register = () => {
                     Email
                   </label>
                   <input
-                    className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
                     type="email"
                     name="email"
                     {...register("email")}
                     placeholder="write your email here"
                   />
                 </div>
-
                 <div className="mt-5">
                   <label className="block text-md mb-2" for="password">
                     Password
                   </label>
                   <input
-                    className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
                     type="password"
                     name="password"
                     {...register("password")}
@@ -84,46 +79,36 @@ const Register = () => {
                     Phonenumber
                   </label>
                   <input
-                    className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
                     type="phone"
                     name="phonenumber"
                     {...register("phonenumber")}
                     placeholder="write your phone number here"
                   />
                 </div>
-
-                <div className="flex justify-between">
-                  <div>
-                    <input
-                      className="cursor-pointer"
-                      type="radio"
-                      name="rememberme"
-                    />
-                    <span className="text-sm">Remember Me</span>
-                  </div>
-                  <span className="text-sm text-blue-700 hover:underline cursor-pointer">
-                    Forgot password?
-                  </span>
+              <div class="flex justify-center">
+                <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+                  Create Account
+                </button>
                 </div>
-                <div className="">
-                  <button
-                    className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
-                    type="submit"
-                  >
-                    Register now
-                  </button>
-                  <div className="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
-                    <img
-                      className=" h-5 cursor-pointer"
-                      src="https://i.imgur.com/arC60SB.png"
-                      alt=""
-                    />
-                    <button>Or sign-in with google</button>
-                  </div>
+              <div class="flex justify-center">
+                <p class="mt-8"> Already have an account?  </p>
+                <p className="text-first mt-8 ml-2 font-semibold">Log in</p>
+                </div>
+                <div class="flex justify-center mt-4">
+                  <p className="text-lg font-semibold">OR</p>
+                </div>
+                <div class="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
+                  <img
+                    class=" h-6 cursor-pointer mb-1"
+                    src="https://i.imgur.com/arC60SB.png"
+                    alt=""
+                  />
+                  <button>sign-up with google</button>
                 </div>
               </form>
-              <p className="mt-8"> Dont have an account? </p>
             </div>
+           
           </div>
         </div>
       </div>
