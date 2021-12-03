@@ -8,7 +8,10 @@ const Login = () => {
       axios.post('http://localhost:5000/login',data)
       .then((resultat)=>{
         
-        console.log(resultat) 
+        console.log(resultat.data)
+        localStorage.setItem('token', resultat.data.token)
+
+
         })
       .catch((err)=>{
         console.log(err)
