@@ -3,7 +3,7 @@ import React from "react";
 const Register = () => {
   return (
     <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
-      <div >
+      <div>
         <div class="bg-white mt-12 w-full justify-center items-center ">
           <div>
             <div>
@@ -63,7 +63,7 @@ const Register = () => {
                 </button>
                 <div class="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
                   <img
-                    class=" h-5 cursor-pointer"
+                    class=" h-5 cursor-pointer mb-1"
                     src="https://i.imgur.com/arC60SB.png"
                     alt=""
                   />
