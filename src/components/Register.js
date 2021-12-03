@@ -1,88 +1,119 @@
 import React from "react";
-
+import { useForm } from "react-hook-form";
+import axios from 'axios'
 const Register = () => {
+    const { register, handleSubmit } = useForm();
+    const onSubmit = (data) => {
+      axios.post('http://localhost:5000/register',data)
+      .then((resultat)=>{
+        console.log(resultat) 
+        })
+      .catch((err)=>{
+        console.log(err)
+      })
+    };
+
+
   return (
-    <div class="w-full mr-64 mt-12 bg-no-repeat bg-cover bg-center">
-      <div class="flex justify-end">
-        <div class="bg-white  mt-12 w-1/2 flex justify-center items-center">
+    <div className="w-full mr-64 mt-12 bg-no-repeat bg-cover bg-center">
+      <div className="flex justify-end">
+        <div className="bg-white  mt-12 w-1/2 flex justify-center items-center">
           <div>
-            <div>
+            <form onSubmit={handleSubmit(onSubmit)}>
               <div>
-                <h1 class="text-2xl font-bold">Register to your account</h1>
+                <h1 className="text-2xl font-bold">Register to your account</h1>
               </div>
-              <div class="my-3">
-                <label class="block text-md mb-2" for="email">
+            
+              <div className="my-3">
+                <label className="block text-md mb-2" for="email">
                   First Name
                 </label>
                 <input
-                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
                   type="text"
                   name="FirstName"
+                  {...register("first_name")}
                   placeholder="write your first name here"
                 />
               </div>
-              <div class="my-3">
-                <label class="block text-md mb-2" for="email">
+              <div className="my-3">
+                <label className="block text-md mb-2" for="email">
                   Last Name
                 </label>
                 <input
-                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
                   type="text"
                   name="LastName"
+                  {...register("last_name")}
                   placeholder="write your last name here"
                 />
               </div>
-              <div class="my-3">
-                <label class="block text-md mb-2" for="email">
+              <div className="my-3">
+                <label className="block text-md mb-2" for="email">
                   Email
                 </label>
                 <input
-                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
                   type="email"
-                  name="password"
+                  name="email"
+                  {...register("email")}
                   placeholder="write your email here"
                 />
               </div>
-              <div class="mt-5">
-                <label class="block text-md mb-2" for="password">
+             
+              <div className="mt-5">
+                <label className="block text-md mb-2" for="password">
                   Password
                 </label>
                 <input
-                  class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
                   type="password"
                   name="password"
+                  {...register("password")}
                   placeholder="password here ..."
                 />
               </div>
-
-              <div class="flex justify-between">
+              <div className="my-3">
+                <label className="block text-md mb-2" for="email">
+                  Phonenumber
+                </label>
+                <input
+                  className="px-4 w-full border-2 py-2 rounded-md text-sm outline-none"
+                  type="phone"
+                  name="phonenumber"
+                  {...register("phonenumber")}
+                  placeholder="write your phone number here"
+                />
+              </div>
+  
+              <div className="flex justify-between">
                 <div>
                   <input
-                    class="cursor-pointer"
+                    className="cursor-pointer"
                     type="radio"
                     name="rememberme"
                   />
-                  <span class="text-sm">Remember Me</span>
+                  <span className="text-sm">Remember Me</span>
                 </div>
-                <span class="text-sm text-blue-700 hover:underline cursor-pointer">
+                <span className="text-sm text-blue-700 hover:underline cursor-pointer">
                   Forgot password?
                 </span>
               </div>
-              <div class="">
-                <button class="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+              <div className="">
+                <button className="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100" type="submit">
                   Register now
                 </button>
-                <div class="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
+                <div className="flex  space-x-2 justify-center items-end bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
                   <img
-                    class=" h-5 cursor-pointer"
+                    className=" h-5 cursor-pointer"
                     src="https://i.imgur.com/arC60SB.png"
                     alt=""
                   />
                   <button>Or sign-in with google</button>
                 </div>
               </div>
-            </div>
-            <p class="mt-8"> Dont have an account? </p>
+            </form>
+            <p className="mt-8"> Dont have an account? </p>
           </div>
         </div>
       </div>
