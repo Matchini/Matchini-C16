@@ -61,7 +61,7 @@ const Nav = () => {
       <div>
         <button onClick={open}>Profile here</button>
 
-        <Modal>
+        <Modal >
           <Profile close={close} />
         </Modal>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
+// import UpdateProfile from "./UpdateProfile.js";
 
 const Profile = (props) => {
   return (
     <div className="flex items-center h-screen w-full justify-center">
-      <div className="max-w-xs">
+      <div className="max-w-full">
         <div className="bg-white shadow-xl rounded-lg py-3">
           <button onClick={props.close}>
             <img
@@ -51,7 +52,9 @@ const Profile = (props) => {
               <a
                 className="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
                 href="/edit"
+               
               >
+                
                 Edit Profile
               </a>
             </div>
