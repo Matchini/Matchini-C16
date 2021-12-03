@@ -1,23 +1,34 @@
-import React from 'react'
+import React from "react";
+import Login from "./Login";
+import Register from "./Register";
 
-const Home=() =>{
-    return (
-<div class="wrap-body">
-   <div class="top">
-	<div class="zerogrid">
-		<div class="row">
-			<div class="f-left">
-				<span><i class="fa fa-map-marker"></i> RBK Tunisie C-16 </span>
-				<span><i class="fa fa-phone"></i> +216 52 779 617</span>
-				<span><i class="fa fa-envelope"></i> Elyesbenkhoud377@gmail.com</span>
-				<span> <i class="fas fa-futbol"> </i>Takwira Louled</span>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+const Home = () => {
+  return (
+    <div className="wrap-body">
+      <div className="top">
+        <div className="zerogrid">
+          <div className="row">
+            <div className="f-left">
+              <span className="text-white">
+                <i className="fa fa-map-marker"></i> RBK Tunisie C-16{" "}
+              </span>
+              <span  className="text-white">
+                <i className="fa fa-phone"></i> +216 52 779 617
+              </span>
+              <span  className="text-white">
+                <i className="fa fa-envelope"></i> Elyesbenkhoud377@gmail.com
+              </span>
+              <span  className="text-white">
+                {" "}
+                <i className="fas fa-futbol"> </i> Don't walk through life just
+                playing football.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-    )
-}
-
-export default Home
+export default Home;
