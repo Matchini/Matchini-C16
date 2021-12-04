@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm, useNavigate } from "react-hook-form";
 import axios from "axios";
+import Alert from "@material-tailwind/react/Alert";
+
 import Home from "./Home";
 const Login = () => {
   // const navigate = useNavigate();
@@ -12,7 +14,7 @@ const Login = () => {
         
         console.log(resultat.data)
         localStorage.setItem('token', resultat.data.token)
-
+       
 
         })
       .catch((err)=>{

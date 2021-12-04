@@ -2,13 +2,16 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Home from "./Home";
+import Alert from "@material-tailwind/react/Alert";
+
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/register", data)
+      .post("http://localhost:5000/register", data)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data)
+
       })
       .catch((err) => {
         console.log(err);
