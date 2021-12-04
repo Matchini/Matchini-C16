@@ -1,5 +1,5 @@
 import React from "react";
-
+import Pub from "../assets/player.png";
 function LandingPage() {
   return (
     <div>
@@ -20,19 +20,19 @@ function LandingPage() {
           <div class="text-sm lg:flex-grow">
             <a
               href="#responsive-header"
-              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-green mr-4"
             >
               Docs
             </a>
             <a
               href="#responsive-header"
-              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-green mr-4"
             >
               Examples
             </a>
             <a
               href="#responsive-header"
-              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+              class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-green"
             >
               Blog
             </a>
@@ -53,6 +53,13 @@ function LandingPage() {
           </div>
         </div>
       </nav>
+
+      <div>
+        <div>commercial text kima fel figma first link</div>
+        <div>
+          <img src={Pub} alt="pub" />
+        </div>
+      </div>
     </div>
   );
 }
