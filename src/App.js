@@ -7,35 +7,37 @@ import Nav from "./components/Nav";
  import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
+import Commercial from "./components/Commercial";
 
 
 class App extends Component {
   render() {
     return (
-      <div >
+      <div>
         <Home />
-        <Nav/>
         <Router>
           <Switch>
             <Route path="/Register" exact>
-            <div className="ml-12 mr-12 mb-12">
-            <Register />
-          </div>
+              <div className="ml-12 mr-12 mb-12">
+                <Register />
+              </div>
             </Route>
             <Route path="/Login" exact>
-            <div className="ml-12 mr-12">
-            <Login />
-          </div>
+              <div className="ml-12 mr-12">
+                <Login />
+              </div>
             </Route>
-            
-            <Route path="/LandingPage" exact>        
+
+            <Route path="/LandingPage" exact>
+              <LandingPage />
+            </Route>
+            <Route path="/Commercial" exact>
+              <Commercial />
+            </Route>
+
             <LandingPage />
-            </Route>
-         
-      
-        <LandingPage />
-        <Footer />
-        </Switch>
+            <Footer />
+          </Switch>
         </Router>
       </div>
 
