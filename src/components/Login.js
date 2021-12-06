@@ -4,17 +4,21 @@ import axios from "axios";
 import Alert from "@material-tailwind/react/Alert";
 
 import Home from "./Home";
-const Login = () => {
+const Login = ({props}) => {
   // const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
-
+  // const createNewForm = () => {
+  //   props.resetForm(() => {
+  //     props.history.pushState(null, "/LandingPage");
+  //   });
+  // };
     const onSubmit = (data) => {
       axios.post('http://localhost:5000/login',data)
       .then((resultat)=>{
         
         console.log(resultat.data)
         localStorage.setItem('token', resultat.data.token)
-       
+        // createNewForm()
 
         })
       .catch((err)=>{
