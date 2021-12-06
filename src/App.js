@@ -17,7 +17,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route path="/Register" exact>
-            <div className="ml-12 mr-12">
+            <div className="ml-12 mr-12 mb-12">
             <Register />
           </div>
             </Route>
