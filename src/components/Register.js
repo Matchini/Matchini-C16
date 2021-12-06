@@ -1,8 +1,9 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Home from "./Home";
-import Alert from "@material-tailwind/react/Alert";
+import Login from "./Login";
+import { useHistory } from "react-router-dom";
+import Footer from "./Footer";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -17,31 +18,51 @@ const Register = () => {
         console.log(err);
       });
     reset();
+    history.push("/Login");
   };
+
+  const history = useHistory();
 
   return (
     <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
-        <div class="bg-white mt-12 w-full justify-center items-center ">
+        <svg
+          onClick={() => history.goBack()}
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+          />
+        </svg>
+      </div>
+      <div>
+        <div class="bg-white w-full justify-center items-center ">
           <div>
             <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div class="text-center">
-                <h1 class="text-2xl font-bold">Welcome to Matchini</h1>
-              </div>
-              <div class="my-5">
-                <label class="block text-md" for="email">
-                  FirstName
-                </label>
-                <input
-                  className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
-                  type="text"
-                  name="FirstName"
-                  {...register("first_name")}
-                  placeholder="write your first name here"
-                />
-              </div>
-              <div className="my-3">
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <div class="text-center">
+                  <h1 class="text-2xl font-bold">Welcome to Matchini</h1>
+                </div>
+                <div class="my-5">
+                  <label class="block text-md" for="email">
+                    FirstName
+                  </label>
+                  <input
+                    className="px-4 w-full bg-gray-100 py-2 rounded-md text-sm outline-none"
+                    type="text"
+                    name="FirstName"
+                    {...register("first_name")}
+                    placeholder="write your first name here"
+                  />
+                </div>
+                <div className="my-3">
                   <label className="block text-md mb-2" for="email">
                     Last Name
                   </label>
@@ -89,14 +110,19 @@ const Register = () => {
                     placeholder="write your phone number here"
                   />
                 </div>
-              <div class="flex justify-center">
-                <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
-                  Create Account
-                </button>
+                <div class="flex justify-center">
+                  <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+                    Create Account
+                  </button>
                 </div>
-              <div class="flex justify-center">
-                <p class="mt-8"> Already have an account?  </p>
-                <p className="text-first mt-8 ml-2 font-semibold">Log in</p>
+                <div class="flex justify-center">
+                  <p class="mt-8"> Already have an account? </p>
+                  <a
+                    onClick={() => history.push("/Login")}
+                    className="text-first mt-8 ml-2 hover:text-yellow-300 underline font-semibold"
+                  >
+                    Log in
+                  </a>
                 </div>
                 <div class="flex justify-center mt-4">
                   <p className="text-lg font-semibold">OR</p>
@@ -111,10 +137,10 @@ const Register = () => {
                 </div>
               </form>
             </div>
-           
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
