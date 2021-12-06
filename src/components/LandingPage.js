@@ -1,6 +1,10 @@
 import React from "react";
 import Pub from "../assets/player.png";
+import { useHistory } from "react-router-dom";
+import Footer from "./Footer";
+
 function LandingPage() {
+  const history = useHistory();
   return (
     <div>
       <nav class="flex items-center justify-between flex-wrap bg-black-500 p-6">
@@ -39,13 +43,15 @@ function LandingPage() {
           </div>
           <div>
             <a
-              href="#"
+              onClick={() => history.push("/Register")}
+              href=""
               class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
             >
               Register
             </a>
             <a
-              href="#"
+              onClick={() => history.push("/Login")}
+              href=""
               class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
             >
               Login
@@ -60,6 +66,7 @@ function LandingPage() {
           <img src={Pub} alt="pub" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
