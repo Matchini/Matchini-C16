@@ -6,11 +6,14 @@ import Footer from "./Footer";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
+
   const onSubmit = (data) => {
     axios
       .post("http://localhost:5000/login", data)
       .then((res) => {
         console.log(res.data);
+        localStorage.setItem('token', res.data.token)
         history.push({pathname:["/Commercial"],state:{query:res.data}})
       })
       .catch((err) => {
@@ -18,7 +21,6 @@ const Login = () => {
       });
   };
 
-  const history = useHistory();
 
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
