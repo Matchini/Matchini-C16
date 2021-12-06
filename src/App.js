@@ -27,7 +27,7 @@ class App extends Component {
           </div>
             </Route>
             
-            <Route path="/Landing" exact>        
+            <Route path="/LandingPage" exact>        
             <LandingPage />
             </Route>
          
