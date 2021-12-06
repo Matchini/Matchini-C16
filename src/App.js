@@ -30,7 +30,6 @@ class App extends Component {
             <Route path="/LandingPage" exact>        
             <LandingPage />
             </Route>
-         
         {/* <div className="grid grid-cols-4 flex ">
           <div className="col-span-4">
           </div>
