@@ -8,10 +8,10 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/login", data)
+      .post("http://localhost:3000/login", data)
       .then((res) => {
         console.log(res.data);
-        history.push({pathname:["/Commercial"],state:{query:res.data}})
+        history.push({ pathname: ["/Commercial"], state: { query: res.data } });
       })
       .catch((err) => {
         console.log(err);
