@@ -12,13 +12,13 @@ const Register = () => {
       .post("http://localhost:5000/register", data)
       .then((res) => {
         console.log(res.data)
+        reset();
+        history.push("/Login");
 
       })
       .catch((err) => {
         console.log(err);
       });
-    reset();
-    history.push("/Login");
   };
 
   const history = useHistory();
