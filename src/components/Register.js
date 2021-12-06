@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import Login from "./Login";
 import { useHistory } from "react-router-dom";
+import Footer from "./Footer";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -16,6 +17,7 @@ const Register = () => {
         console.log(err);
       });
     reset();
+    history.push("/Login");
   };
 
   const history = useHistory();
@@ -137,6 +139,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,7 +1,8 @@
 import React from "react";
-import { useForm, useNavigate } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import Footer from "./Footer";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -84,7 +85,10 @@ const Login = () => {
               </div>
               <div className="">
                 <div class="flex justify-center">
-                  <button class=" mt-6 w-3/6 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+                  <button
+                    onClick={() => history.push("/Commercial")}
+                    class=" mt-6 w-3/6 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
+                  >
                     LogIn
                   </button>
                 </div>
@@ -113,6 +117,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
