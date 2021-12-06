@@ -11,6 +11,7 @@ const Login = () => {
       .post("http://localhost:3000/login", data)
       .then((res) => {
         console.log(res.data);
+        history.push({ pathname: ["/Commercial"], state: { query: res.data } });
       })
       .catch((err) => {
         console.log(err);
@@ -86,7 +87,7 @@ const Login = () => {
               <div className="">
                 <div class="flex justify-center">
                   <button
-                    onClick={() => history.push("/Commercial")}
+                    type="submit"
                     class=" mt-6 w-3/6 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
                   >
                     LogIn
