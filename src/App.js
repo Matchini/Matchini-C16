@@ -7,11 +7,30 @@ import Register from "./components/Register";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
+
 class App extends Component {
   render() {
     return (
-      <div>
+      <div >
         <Home />
+        
+        <Router>
+          <Switch>
+            <Route path="/Register" exact>
+            <div className="ml-12 mr-12">
+            <Register />
+          </div>
+            </Route>
+            <Route path="/Login" exact>
+            <div className="ml-12 mr-12">
+            <Login />
+          </div>
+            </Route>
+            
+            <Route path="/LandingPage" exact>        
+            <LandingPage />
+            </Route>
+         
         {/* <div className="grid grid-cols-4 flex ">
           <div className="col-span-4">
           </div>
@@ -28,6 +47,8 @@ class App extends Component {
         <div> */}
         <LandingPage />
         <Footer />
+        </Switch>
+        </Router>
       </div>
       // </div>
     );
