@@ -10,7 +10,7 @@ const Login = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/login", data)
+      .post("http://localhost:3000/login", data)
       .then((res) => {
         console.log(res.data);
         localStorage.setItem('token', res.data.token)

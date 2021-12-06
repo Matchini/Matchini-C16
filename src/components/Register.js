@@ -9,12 +9,11 @@ const Register = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/register", data)
+      .post("http://localhost:3000/register", data)
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
         reset();
         history.push("/Login");
-
       })
       .catch((err) => {
         console.log(err);
