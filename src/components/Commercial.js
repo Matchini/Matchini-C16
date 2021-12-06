@@ -1,12 +1,10 @@
 import React from "react";
-import Footer from "./Footer";
-import Home from "./Home";
+import Sidebar from "./Sidebar";
 
 function Commercial() {
   return (
     <div>
-      commercial page
-      <Footer />
+      <Sidebar />
     </div>
   );
 }
