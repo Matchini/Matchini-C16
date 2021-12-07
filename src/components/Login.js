@@ -10,12 +10,18 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
   const notify = () => toast("Check your data!");
+  const notify2 = () => toast(" login Sucess!");
 
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/login", data)
       .then((res) => {
+        setTimeout(() => {
+          notify2();
+
+        }, 1000);
         console.log(res.data);
+
         localStorage.setItem('token', res.data.token)
         history.push({pathname:["/Commercial"],state:{query:res.data}})
       })

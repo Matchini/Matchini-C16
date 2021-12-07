@@ -11,12 +11,17 @@ import { GoogleLogin } from "react-google-login";
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
   const notify = () => toast("Not register!");
+  const notify2 = () => toast(" register Sucess!");
 
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/register", data)
       .then((res) => {
         console.log(res.data);
+        setTimeout(() => {
+          notify2();
+
+        }, 1000);
         reset();
         history.push("/Login");
       })
