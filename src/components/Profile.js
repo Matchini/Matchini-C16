@@ -1,8 +1,10 @@
 import React from "react";
 // import UpdateProfile from "./UpdateProfile.js";
 
+
 const Profile = (props) => {
  
+
 
 return (
   <div className="flex items-center h-screen w-full justify-center">
