@@ -1,13 +1,11 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 
 function Commercial() {
   const location = useLocation();
-useEffect(() => {
-  console.log(location.state.query)
-}, [location])
+  useEffect(() => {}, [location]);
   return (
     <div>
       <Sidebar />
