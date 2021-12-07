@@ -2,29 +2,48 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Login from "./Login";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
+import { GoogleLogin } from "react-google-login";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
+  const notify = () => toast("Not register!");
+  const notify2 = () => toast(" register Sucess!");
+
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/register", data)
+      .post("http://localhost:3000/register", data)
       .then((res) => {
-        console.log(res.data)
+        console.log(res.data);
+        setTimeout(() => {
+          notify2();
+
+        }, 1000);
         reset();
         history.push("/Login");
-
       })
       .catch((err) => {
         console.log(err);
+        notify();
+
       });
+  };
+  const responseGoogleSuccess = () => {
+    history.push("/Commercial");
+  };
+  const responseGoogleFail = () => {
+    history.push("/");
   };
 
   const history = useHistory();
 
   return (
+    
     <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+      
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -114,6 +133,7 @@ const Register = () => {
                   <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
                     Create Account
                   </button>
+                  <ToastContainer />
                 </div>
                 <div class="flex justify-center">
                   <p class="mt-8"> Already have an account? </p>
@@ -128,12 +148,13 @@ const Register = () => {
                   <p className="text-lg font-semibold">OR</p>
                 </div>
                 <div class="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
-                  <img
-                    class=" h-6 cursor-pointer mb-1"
-                    src="https://i.imgur.com/arC60SB.png"
-                    alt=""
+                  <GoogleLogin
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
                   />
-                  <button>sign-up with google</button>
                 </div>
               </form>
             </div>

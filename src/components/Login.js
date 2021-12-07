@@ -2,26 +2,55 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Footer";
-
+import { GoogleLogin } from "react-google-login";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
 
+  const notify = () => toast("Check your data!");
+  const notify2 = () => toast(" login Sucess!");
+
+
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/login", data)
+      .post("http://localhost:3000/login", data)
       .then((res) => {
+        setTimeout(() => {
+          notify2();
+
+        }, 1000);
         console.log(res.data);
+
         localStorage.setItem('token', res.data.token)
         history.push({pathname:["/Commercial"],state:{query:res.data}})
       })
       .catch((err) => {
         console.log(err);
+        notify();
+
       });
   };
 
-
+  const responseGoogleSuccess = (response) => {
+    axios({
+      method: "POST",
+      url: "http://localhost:3000/googlelogin",
+      data: { tokenId: response.tokenId },
+    })
+      .then((res) => {
+        console.log(res, "done wokring login google");
+      })
+      .catch((err) => {
+        console.log(err, "errrr");
+      });
+    history.push("/Commercial");
+  };
+  const responseGoogleFail = () => {
+    history.push("/");
+  };
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
@@ -107,14 +136,17 @@ const Login = () => {
                 <div class="flex justify-center mt-6">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div className="flex space-x-2 mt-6 h-12 justify-center items-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
-                  <img
-                    className=" h-5 cursor-pointer"
-                    src="https://i.imgur.com/arC60SB.png"
-                    alt=""
+                <div className="flex space-x-2 mt-6 h-12 justify-center items-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition ">
+                  <GoogleLogin
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
                   />
-                  <button>Sign-in with google</button>
                 </div>
+                <ToastContainer />
+
               </div>
             </form>
           </div>

@@ -17,6 +17,7 @@ useEffect(() => {
     history.push('/Login')
   }
 }, [location])
+  useEffect(() => {}, [location]);
   return (
     <div>
       <Sidebar />
