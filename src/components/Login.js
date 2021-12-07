@@ -57,7 +57,7 @@ const Login = () => {
                     src="https://i.imgur.com/arC60SB.png"
                     alt=""
                   />
-                  <button>Or sign-in with google</button>
+                  <button> google</button>
                 </div>
               </div>
             </div>
