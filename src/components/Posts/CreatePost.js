@@ -1,6 +1,20 @@
+import axios from "axios";
 import React from "react";
+import { useForm } from "react-hook-form";
 
 const CreatePost = () => {
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    axios
+      .post("http://localhost:3000/match", data)
+      .then((res) => {
+        reset();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="flex lg:flex-col flex-col items-center py-8 px-4">
       create game
@@ -13,37 +27,28 @@ const CreatePost = () => {
         </label>
         <input
           id="fullName"
+          name="fullName"
           autoComplete="off"
           className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
           placeholder="Write your full name"
+          {...register("fullName")}
         />
       </div>{" "}
       <div className="flex flex-col lg:mr-16">
         <label
-          htmlFor="email"
+          htmlFor="Date"
           className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
         >
-          Email
+          Date
         </label>
         <input
-          id="email"
+          id="time"
+          name="time"
+          type="date"
           autoComplete="off"
           className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
           placeholder="Placeholder"
-        />
-      </div>
-      <div className="flex flex-col lg:mr-16">
-        <label
-          htmlFor="number"
-          className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
-        >
-          Number
-        </label>
-        <input
-          id="number"
-          autoComplete="off"
-          className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-          placeholder="+216 ..."
+          {...register("time")}
         />
       </div>
       <div className="flex flex-col lg:mr-16">
@@ -55,9 +60,11 @@ const CreatePost = () => {
         </label>
         <input
           id="city"
+          name="city"
           autoComplete="off"
           className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-          placeholder="+216 ..."
+          placeholder="..."
+          {...register("city")}
         />
       </div>
       <div className="flex flex-col lg:mr-16">
@@ -70,10 +77,34 @@ const CreatePost = () => {
         <input
           id="stadium"
           autoComplete="off"
+          name="stadium"
           className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-          placeholder="+216 ..."
+          placeholder="win e la3ba"
+          {...register("stadium")}
         />
       </div>
+      <div className="flex flex-col lg:mr-16">
+        <label
+          htmlFor="number"
+          className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
+        >
+          Number
+        </label>
+        <input
+          id="number"
+          name="number"
+          autoComplete="off"
+          className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
+          placeholder="+216 ..."
+          {...register("number")}
+        />
+      </div>
+      <button
+        className="mx-2 my-2 bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
+        onClick={handleSubmit(onSubmit)}
+      >
+        submit
+      </button>
     </div>
   );
 };
