@@ -2,22 +2,38 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Footer";
 import { GoogleLogin } from "react-google-login";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+
+  const notify = () => toast("Check your data!");
+  const notify2 = () => toast(" login Sucess!");
+
+
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/login", data)
       .then((res) => {
+        setTimeout(() => {
+          notify2();
+
+        }, 1000);
         console.log(res.data);
-        history.push({ pathname: ["/Commercial"], state: { query: res.data } });
+
+        localStorage.setItem('token', res.data.token)
+        history.push({pathname:["/Commercial"],state:{query:res.data}})
       })
       .catch((err) => {
         console.log(err);
+        notify();
+
       });
   };
+
   const responseGoogleSuccess = (response) => {
     axios({
       method: "POST",
@@ -35,7 +51,6 @@ const Login = () => {
   const responseGoogleFail = () => {
     history.push("/");
   };
-
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
@@ -130,6 +145,8 @@ const Login = () => {
                     cookiePolicy={"single_host_origin"}
                   />
                 </div>
+                <ToastContainer />
+
               </div>
             </form>
           </div>
