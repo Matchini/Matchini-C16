@@ -9,8 +9,10 @@ import { GoogleLogin } from "react-google-login";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+
   const notify = () => toast("Check your data!");
   const notify2 = () => toast(" login Sucess!");
+
 
   const onSubmit = (data) => {
     axios
@@ -31,6 +33,7 @@ const Login = () => {
 
       });
   };
+
   const responseGoogleSuccess = (response) => {
     axios({
       method: "POST",
@@ -48,7 +51,6 @@ const Login = () => {
   const responseGoogleFail = () => {
     history.push("/");
   };
-
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
