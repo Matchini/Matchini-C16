@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
+import { GoogleLogin } from "react-google-login";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -24,6 +25,12 @@ const Register = () => {
         notify();
 
       });
+  };
+  const responseGoogleSuccess = () => {
+    history.push("/Commercial");
+  };
+  const responseGoogleFail = () => {
+    history.push("/");
   };
 
   const history = useHistory();
@@ -136,12 +143,13 @@ const Register = () => {
                   <p className="text-lg font-semibold">OR</p>
                 </div>
                 <div class="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
-                  <img
-                    class=" h-6 cursor-pointer mb-1"
-                    src="https://i.imgur.com/arC60SB.png"
-                    alt=""
+                  <GoogleLogin
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
                   />
-                  <button>sign-up with google</button>
                 </div>
               </form>
             </div>

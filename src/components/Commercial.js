@@ -1,5 +1,7 @@
 import React,{useEffect} from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
 
@@ -17,6 +19,7 @@ useEffect(() => {
     history.push('/Login')
   }
 }, [location])
+  useEffect(() => {}, [location]);
   return (
     <div>
       <Sidebar />
