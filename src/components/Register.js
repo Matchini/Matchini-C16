@@ -2,22 +2,30 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Login from "./Login";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import { GoogleLogin } from "react-google-login";
 
 const Register = () => {
   const { register, handleSubmit, reset } = useForm();
+  const notify = () => toast("Ouuppss ! There is an Error");
+  const notify2 = () => toast("Your Account created successfully");
+
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/register", data)
       .then((res) => {
-        console.log(res.data);
+        setTimeout(() => {
+          notify2();
+        }, 1000);
         reset();
         history.push("/Login");
       })
       .catch((err) => {
         console.log(err);
+        notify();
       });
   };
   const responseGoogleSuccess = () => {
@@ -120,6 +128,7 @@ const Register = () => {
                   <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
                     Create Account
                   </button>
+                  <ToastContainer />
                 </div>
                 <div class="flex justify-center">
                   <p class="mt-8"> Already have an account? </p>

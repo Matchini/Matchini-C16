@@ -2,22 +2,34 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Footer from "./Footer";
 import { GoogleLogin } from "react-google-login";
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+
+  const notify = () => toast("Ouuppss ! There is an Error");
+  const notify2 = () => toast("Congratulation : you successfully logged in");
+
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/login", data)
       .then((res) => {
-        console.log(res.data);
+        setTimeout(() => {
+          notify2();
+        }, 1000);
+
+        localStorage.setItem("token", res.data.token);
         history.push({ pathname: ["/Commercial"], state: { query: res.data } });
       })
       .catch((err) => {
         console.log(err);
+        notify();
       });
   };
+
   const responseGoogleSuccess = (response) => {
     axios({
       method: "POST",
@@ -35,7 +47,6 @@ const Login = () => {
   const responseGoogleFail = () => {
     history.push("/");
   };
-
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
@@ -130,6 +141,7 @@ const Login = () => {
                     cookiePolicy={"single_host_origin"}
                   />
                 </div>
+                <ToastContainer />
               </div>
             </form>
           </div>
