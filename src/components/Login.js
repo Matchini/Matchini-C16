@@ -2,11 +2,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./Footer";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
+  const notify = () => toast("Check your data!");
 
   const onSubmit = (data) => {
     axios
@@ -18,6 +21,8 @@ const Login = () => {
       })
       .catch((err) => {
         console.log(err);
+        notify();
+
       });
   };
 
@@ -115,6 +120,8 @@ const Login = () => {
                   />
                   <button>Sign-in with google</button>
                 </div>
+                <ToastContainer />
+
               </div>
             </form>
           </div>
