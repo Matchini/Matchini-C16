@@ -1,9 +1,15 @@
-import React,{useState} from "react";
+import React,{useEffect,useState} from "react";
+import { useLocation } from "react-router-dom";
+
 import Sidebar from "./Sidebar";
 import { Transition } from '@tailwindui/react'
 
 function Commercial() {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation();
+useEffect(() => {
+  console.log(location.state.query)
+}, [location])
   return (
     <div>
        <div>

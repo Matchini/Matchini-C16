@@ -8,9 +8,10 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/login", data)
+      .post("http://localhost:5000/login", data)
       .then((res) => {
         console.log(res.data);
+        history.push({pathname:["/Commercial"],state:{query:res.data}})
       })
       .catch((err) => {
         console.log(err);
@@ -20,7 +21,7 @@ const Login = () => {
   const history = useHistory();
 
   return (
-    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center">
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -39,7 +40,7 @@ const Login = () => {
         </svg>
       </div>
       <div>
-        <div className="bg-white mt-12 w-full justify-center items-center ">
+        <div className="bg-white mt-12 w-full justify-center items-center px-12">
           <div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div class="text-center">
@@ -86,7 +87,7 @@ const Login = () => {
               <div className="">
                 <div class="flex justify-center">
                   <button
-                    onClick={() => history.push("/Commercial")}
+                    type="submit"
                     class=" mt-6 w-3/6 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100"
                   >
                     LogIn
@@ -117,7 +118,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <div className="mt-6 rounded">
       <Footer />
+      </div>
     </div>
   );
 };

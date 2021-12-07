@@ -9,21 +9,22 @@ const Register = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/register", data)
+      .post("http://localhost:5000/register", data)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data)
+        reset();
+        history.push("/Login");
+
       })
       .catch((err) => {
         console.log(err);
       });
-    reset();
-    history.push("/Login");
   };
 
   const history = useHistory();
 
   return (
-    <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+    <div class="w-full mt-12 bg-no-repeat bg-cover bg-center">
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -42,7 +43,7 @@ const Register = () => {
         </svg>
       </div>
       <div>
-        <div class="bg-white w-full justify-center items-center ">
+        <div class="bg-white w-full justify-center items-center px-12">
           <div>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -139,7 +140,9 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <div className="mt-6 rounded">
       <Footer />
+      </div>
     </div>
   );
 };
