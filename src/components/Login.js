@@ -18,7 +18,18 @@ const Login = () => {
         console.log(err);
       });
   };
-  const responseGoogleSuccess = () => {
+  const responseGoogleSuccess = (response) => {
+    axios({
+      method: "POST",
+      url: "http://localhost:3000/googlelogin",
+      data: { tokenId: response.tokenId },
+    })
+      .then((res) => {
+        console.log(res, "done wokring login google");
+      })
+      .catch((err) => {
+        console.log(err, "errrr");
+      });
     history.push("/Commercial");
   };
   const responseGoogleFail = () => {
