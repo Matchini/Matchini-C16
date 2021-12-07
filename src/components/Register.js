@@ -2,22 +2,31 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Login from "./Login";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
 import { GoogleLogin } from "react-google-login";
 
 const Register = () => {
+  const history = useHistory();
   const { register, handleSubmit, reset } = useForm();
+  const notify = () => toast("Ouuppss ! There is an Error");
+  const notify2 = () => toast("Your Account created successfully");
+
   const onSubmit = (data) => {
     axios
       .post("http://localhost:3000/register", data)
       .then((res) => {
-        console.log(res.data);
-        reset();
+        setTimeout(() => {
+          notify2();
+        }, 1000);
         history.push("/Login");
+        reset();
       })
       .catch((err) => {
         console.log(err);
+        notify();
       });
   };
   const responseGoogleSuccess = () => {
@@ -27,37 +36,35 @@ const Register = () => {
     history.push("/");
   };
 
-  const history = useHistory();
-
   return (
-    <div class="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
       <div>
         <svg
           onClick={() => history.goBack()}
           xmlns="http://www.w3.org/2000/svg"
-          class="h-10 w-10"
+          className="h-10 w-10"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
           />
         </svg>
       </div>
       <div>
-        <div class="bg-white w-full justify-center items-center ">
+        <div className="bg-white w-full justify-center items-center ">
           <div>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
-                <div class="text-center">
-                  <h1 class="text-2xl font-bold">Welcome to Matchini</h1>
+                <div className="text-center">
+                  <h1 className="text-2xl font-bold">Welcome to Matchini</h1>
                 </div>
-                <div class="my-5">
-                  <label class="block text-md" for="email">
+                <div className="my-5">
+                  <label className="block text-md" htmlFor="email">
                     FirstName
                   </label>
                   <input
@@ -69,7 +76,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="my-3">
-                  <label className="block text-md mb-2" for="email">
+                  <label className="block text-md mb-2" htmlFor="email">
                     Last Name
                   </label>
                   <input
@@ -81,7 +88,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="my-3">
-                  <label className="block text-md mb-2" for="email">
+                  <label className="block text-md mb-2" htmlFor="email">
                     Email
                   </label>
                   <input
@@ -93,7 +100,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="mt-5">
-                  <label className="block text-md mb-2" for="password">
+                  <label className="block text-md mb-2" htmlFor="password">
                     Password
                   </label>
                   <input
@@ -105,7 +112,7 @@ const Register = () => {
                   />
                 </div>
                 <div className="my-3">
-                  <label className="block text-md mb-2" for="email">
+                  <label className="block text-md mb-2" htmlFor="email">
                     Phonenumber
                   </label>
                   <input
@@ -116,13 +123,14 @@ const Register = () => {
                     placeholder="write your phone number here"
                   />
                 </div>
-                <div class="flex justify-center">
-                  <button class=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
+                <div className="flex justify-center">
+                  <button className=" mt-4 w-2/5 h-12 text-xl bg-first hover:bg-green-400 text-white py-2 rounded-md transition duration-100">
                     Create Account
                   </button>
+                  <ToastContainer />
                 </div>
-                <div class="flex justify-center">
-                  <p class="mt-8"> Already have an account? </p>
+                <div className="flex justify-center">
+                  <p className="mt-8"> Already have an account? </p>
                   <a
                     onClick={() => history.push("/Login")}
                     className="text-first mt-8 ml-2 hover:text-yellow-300 underline font-semibold"
@@ -130,10 +138,10 @@ const Register = () => {
                     Log in
                   </a>
                 </div>
-                <div class="flex justify-center mt-4">
+                <div className="flex justify-center mt-4">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div class="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
+                <div className="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
                   <GoogleLogin
                     clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
                     buttonText="Login with your google account"
