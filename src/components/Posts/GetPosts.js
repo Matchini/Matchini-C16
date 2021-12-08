@@ -3,16 +3,36 @@ import axios from "axios";
 const GetPosts = () => {
   const [posts, setPosts] = useState([]);
 
+  // const getData = () => {
+  //   axios
+  //     .get(`http://localhost:3000/matches/`)
+  //     .then((res) => {
+  //       setPosts(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  //   console.log(posts);
+  // };
+
+  // useEffect(() => {
+  //   getData();
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get(`http://localhost:3000/matches/`)
-      .then((res) => {
-        setPosts(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+    function getData() {
+      axios
+        .get(`http://localhost:3000/match`)
+        .then((res) => {
+          setPosts(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log(posts);
+    }
+    getData();
+  }, []);
 
   return (
     <div>
