@@ -16,6 +16,10 @@ const CreatePost = () => {
       });
   };
 
+  const refresh = () => {
+    window.location.reload();
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex lg:flex-col flex-col items-center py-8 px-4">
@@ -101,7 +105,10 @@ const CreatePost = () => {
             {...register("number")}
           />
         </div>
-        <button className="mx-2 my-2 bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">
+        <button
+          onClick={refresh}
+          className="mx-2 my-2 bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
+        >
           submit
         </button>
       </div>
