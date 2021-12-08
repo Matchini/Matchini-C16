@@ -27,19 +27,9 @@ const GetPosts = () => {
     <div>
       {posts.map((e, key) => {
         return (
-          <div key={key}>
-            <div className="bg-blue p-1 font-sans">
+          <div key={key} className="sticky">
+            <div className="sticky bg-blue p-1 font-sans">
               <div className="rounded bg-blue-light flex-col w-full border-2 bg-green-300 p-2">
-                {/* <div className="flex justify-between py-1 w-full">
-                    <h3 className="text-sm"> Match</h3>
-                    <svg
-                      className="h-4 fill-current text-grey-dark cursor-pointer"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 10a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4zm7 0a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4z" />
-                    </svg>
-                  </div> */}
                 <div className="text-sm mt-2 flex flex-row bg-white w-full p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
                   <div>
                     Name : {e.fullName} {" *"}
