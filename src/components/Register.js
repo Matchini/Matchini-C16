@@ -37,11 +37,7 @@ const Register = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div class="w-full mt-12 bg-no-repeat bg-cover bg-center">
-=======
-    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
->>>>>>> 3761a64c38ebe8fef881448805a175b0eb6dc91b
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -60,11 +56,7 @@ const Register = () => {
         </svg>
       </div>
       <div>
-<<<<<<< HEAD
         <div class="bg-white w-full justify-center items-center px-12">
-=======
-        <div className="bg-white w-full justify-center items-center ">
->>>>>>> 3761a64c38ebe8fef881448805a175b0eb6dc91b
           <div>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -149,11 +141,7 @@ const Register = () => {
                 <div className="flex justify-center mt-4">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-<<<<<<< HEAD
                 <div class="flex mt-2 space-x-2 justify-center text-white py-2 rounded-md transition duration-100">
-=======
-                <div className="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
->>>>>>> 3761a64c38ebe8fef881448805a175b0eb6dc91b
                   <GoogleLogin
                     clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
                     buttonText="Login with your google account"
