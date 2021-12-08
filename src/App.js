@@ -12,7 +12,7 @@ import Commercial from "./components/Commercial";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-gray-100">
         <Home />
 
         <Router>
