@@ -31,7 +31,7 @@ class App extends Component {
             <Route path="/LandingPage" exact>
               <LandingPage />
             </Route>
-            <Route path="/Commercial" exact>
+            <Route path="/commercial" exact>
               <Commercial />
             </Route>
 

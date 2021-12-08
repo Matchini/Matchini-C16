@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React,{useEffect,useState} from "react";
 import { useLocation } from "react-router-dom";
 
@@ -33,6 +34,14 @@ function Commercial() {
       >
       <Sidebar show={isOpen}/>
       </Transition>
+=======
+import CreatePost from "./Posts/CreatePost";
+
+function Commercial() {
+  return (
+    <div>
+      <CreatePost />
+>>>>>>> 3761a64c38ebe8fef881448805a175b0eb6dc91b
     </div>
   );
 }
