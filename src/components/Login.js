@@ -48,7 +48,7 @@ const Login = () => {
     history.push("/");
   };
   return (
-    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center">
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -67,7 +67,7 @@ const Login = () => {
         </svg>
       </div>
       <div>
-        <div className="bg-white mt-12 w-full justify-center items-center ">
+        <div className="bg-white mt-12 w-full justify-center items-center px-12">
           <div>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="text-center">
@@ -132,8 +132,9 @@ const Login = () => {
                 <div className="flex justify-center mt-6">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div className="flex space-x-2 mt-6 h-12 justify-center items-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition ">
+                <div className="flex space-x-2 mt-6 h-12 justify-center items-center text-white py-2 rounded-md transition ">
                   <GoogleLogin
+                    className="bg-transparent"
                     clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
                     buttonText="Login with your google account"
                     onSuccess={responseGoogleSuccess}
@@ -147,7 +148,9 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <div className="mt-6 rounded">
       <Footer />
+      </div>
     </div>
   );
 };

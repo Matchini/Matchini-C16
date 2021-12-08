@@ -12,20 +12,20 @@ import Commercial from "./components/Commercial";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="bg-gray-100">
         <Home />
 
         <Router>
           <Switch>
             <Route path="/Register" exact>
-              <div className="ml-12 mr-12 mb-12">
+             
                 <Register />
-              </div>
+             
             </Route>
             <Route path="/Login" exact>
-              <div className="ml-12 mr-12">
+              
                 <Login />
-              </div>
+              
             </Route>
 
             <Route path="/LandingPage" exact>

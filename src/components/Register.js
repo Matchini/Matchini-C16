@@ -37,7 +37,7 @@ const Register = () => {
   };
 
   return (
-    <div className="w-full mt-12 bg-no-repeat bg-cover bg-center mr-12">
+    <div class="w-full mt-12 bg-no-repeat bg-cover bg-center">
       <div>
         <svg
           onClick={() => history.goBack()}
@@ -56,7 +56,7 @@ const Register = () => {
         </svg>
       </div>
       <div>
-        <div className="bg-white w-full justify-center items-center ">
+        <div class="bg-white w-full justify-center items-center px-12">
           <div>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -141,7 +141,7 @@ const Register = () => {
                 <div className="flex justify-center mt-4">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div className="flex mt-2 space-x-2 justify-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
+                <div class="flex mt-2 space-x-2 justify-center text-white py-2 rounded-md transition duration-100">
                   <GoogleLogin
                     clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
                     buttonText="Login with your google account"
@@ -155,7 +155,9 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <div className="mt-6 rounded">
       <Footer />
+      </div>
     </div>
   );
 };
