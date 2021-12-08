@@ -15,7 +15,7 @@ const Login = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/login", data)
+      .post("https://matchini.herokuapp.com/login", data)
       .then((res) => {
         setTimeout(() => {
           notify2();
@@ -149,7 +149,7 @@ const Login = () => {
         </div>
       </div>
       <div className="mt-6 rounded">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );

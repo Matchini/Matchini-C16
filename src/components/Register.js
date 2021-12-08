@@ -16,7 +16,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:3000/register", data)
+      .post("https://matchini.herokuapp.com/register", data)
       .then((res) => {
         setTimeout(() => {
           notify2();
@@ -156,7 +156,7 @@ const Register = () => {
         </div>
       </div>
       <div className="mt-6 rounded">
-      <Footer />
+        <Footer />
       </div>
     </div>
   );
