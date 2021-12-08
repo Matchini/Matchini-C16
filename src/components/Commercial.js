@@ -3,9 +3,9 @@ import GetPosts from "./Posts/GetPosts";
 
 function Commercial() {
   return (
-    <div>
-      <CreatePost />
-      <GetPosts />
+    <div className="flex">
+      <CreatePost className="flex-initial ..." />
+      <GetPosts className="flex-initial ..." />
     </div>
   );
 }

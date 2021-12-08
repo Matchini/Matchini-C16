@@ -38,22 +38,22 @@ const GetPosts = () => {
                     </svg>
                   </div>
                   <div className="text-sm mt-2">
-                    <div className="bg-white p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
+                    <div className="bg-white p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
                       Name : {e.fullName}
                     </div>
 
-                    <div className="bg-white p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                      City / stadium : {e.city} || {e.stadium}
+                    <div className="bg-white p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
+                      City : {e.city}
+                    </div>
+                    <div className="bg-white p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
+                      Stadium : {e.stadium}
                     </div>
 
-                    <div className="bg-white p-2 rounded mt-1 border-b border-grey cursor-pointer hover:bg-grey-lighter">
-                      time : {e.time} || Call : {e.number}
-                      {/* <div className="text-grey-darker mt-2 ml-2 flex justify-between items-start">
-                        <img
-                          src="https://miro.medium.com/fit/c/1360/1360/1*uMbeJrgezp8uWkAbZvvDBA.jpeg"
-                          className="rounded-full"
-                        />
-                      </div> */}
+                    <div className="bg-white p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
+                      time : {e.time}
+                    </div>
+                    <div className="bg-white p-2 rounded mt-1 border-b border-grey  hover:bg-grey-lighter">
+                      Phone : {e.number}
                     </div>
                   </div>
                 </div>
