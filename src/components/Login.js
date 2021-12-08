@@ -3,22 +3,38 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
-
+import { GoogleLogin } from "react-google-login";
 const Login = () => {
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
   const onSubmit = (data) => {
     axios
-      .post("http://localhost:5000/login", data)
+      .post("http://localhost:3000/login", data)
       .then((res) => {
         console.log(res.data);
-        history.push({pathname:["/Commercial"],state:{query:res.data}})
+        history.push({ pathname: ["/Commercial"], state: { query: res.data } });
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-  const history = useHistory();
+  const responseGoogleSuccess = (response) => {
+    axios({
+      method: "POST",
+      url: "http://localhost:3000/googlelogin",
+      data: { tokenId: response.tokenId },
+    })
+      .then((res) => {
+        console.log(res, "done wokring login google");
+      })
+      .catch((err) => {
+        console.log(err, "errrr");
+      });
+    history.push("/Commercial");
+  };
+  const responseGoogleFail = () => {
+    history.push("/");
+  };
 
   return (
     <div className="w-full mt-12 bg-no-repeat bg-cover bg-center">
@@ -105,13 +121,15 @@ const Login = () => {
                 <div class="flex justify-center mt-6">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div className="flex space-x-2 mt-6 h-12 justify-center items-center bg-gray-700 hover:bg-gray-600 text-white py-2 rounded-md transition duration-100">
-                  <img
-                    className=" h-5 cursor-pointer"
-                    src="https://i.imgur.com/arC60SB.png"
-                    alt=""
+                <div className="flex space-x-2 mt-6 h-12 justify-center items-center text-white py-2 rounded-md transition ">
+                  <GoogleLogin
+                    className="bg-transparent"
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
                   />
-                  <button>Sign-in with google</button>
                 </div>
               </div>
             </form>

@@ -7,9 +7,7 @@ import { Transition } from '@tailwindui/react'
 function Commercial() {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation();
-useEffect(() => {
-  console.log(location.state.query)
-}, [location])
+  useEffect(() => {}, [location]);
   return (
     <div>
        <div>
