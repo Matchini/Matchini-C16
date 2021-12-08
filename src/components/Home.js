@@ -4,6 +4,7 @@ const Home = () => {
   return (
     <div className="wrap-body">
       <div className="top flex items-center">
+        
         <img
           onClick={(event) => (window.location.href = "/")}
           className="h-12 w-20 ml-12"

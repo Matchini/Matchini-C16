@@ -8,18 +8,6 @@ function LandingPage() {
   return (
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-black-500 p-6">
-        <div>
-          <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black">
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
-        </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
             <a
@@ -45,14 +33,14 @@ function LandingPage() {
             <a
               onClick={() => history.push("/Register")}
               href=""
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
             >
               Register
             </a>
             <a
               onClick={() => history.push("/Login")}
               href=""
-              className="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-teal-500 hover:bg-green mt-4 lg:mt-0"
             >
               Login
             </a>
@@ -60,10 +48,12 @@ function LandingPage() {
         </div>
       </nav>
 
-      <div>
-        <div>commercial text kima fel figma first link</div>
-        <div>
+      <div className="grid grid-cols-5 flex grid-rows-1 items-center ">
+        <div className="col-start-4 col-end-6 row-start-2 row-end-2">
           <img src={Pub} alt="pub" />
+        </div>
+        <div className="col-start-1 col-end-4 row-start-2 row-end-2 ml-8 mr-8 mt-8">
+          commercial text kima fel figma first link
         </div>
       </div>
       <Footer />
