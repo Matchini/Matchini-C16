@@ -30,7 +30,7 @@ const Register = () => {
       });
   };
   const responseGoogleSuccess = () => {
-    history.push("/Commercial");
+    history.push("/commercial");
   };
   const responseGoogleFail = () => {
     history.push("/");
@@ -141,7 +141,7 @@ const Register = () => {
                 <div className="flex justify-center mt-4">
                   <p className="text-lg font-semibold">OR</p>
                 </div>
-                <div class="flex mt-2 space-x-2 justify-center text-white py-2 rounded-md transition duration-100">
+                <div className="flex mt-2 space-x-2 justify-center text-white py-2 rounded-md transition duration-100">
                   <GoogleLogin
                     clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
                     buttonText="Login with your google account"
