@@ -2,6 +2,9 @@ import React from "react";
 import Pub from "../assets/player.png";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
+import Com from "./Com";
+import Comm from "./Comm";
+import Commm from "./Commm";
 
 function LandingPage() {
   const history = useHistory();
@@ -48,12 +51,15 @@ function LandingPage() {
         </div>
       </nav>
 
-      <div className="grid grid-cols-5 flex grid-rows-1 items-center ">
-        <div className="col-start-4 col-end-6 row-start-2 row-end-2">
-          <img src={Pub} alt="pub" />
+      <div className="grid grid-cols-3 gap-4">
+        <div>
+          <Comm />
         </div>
-        <div className="col-start-1 col-end-4 row-start-2 row-end-2 ml-8 mr-8 mt-8">
-          commercial text kima fel figma first link
+        <div>
+          <Com />
+        </div>
+        <div>
+          <Commm />
         </div>
       </div>
       <Footer />
