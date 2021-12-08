@@ -51,7 +51,7 @@ function LandingPage() {
         </div>
       </nav>
 
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4 ">
         <div>
           <Comm />
         </div>
