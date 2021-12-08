@@ -1,27 +1,39 @@
-import React, { useState,useEffect } from "react";
-import axios from "axios";
-import { Image } from "cloudinary-react";
+import React, { useState, useEffect } from "react";
+
 const Profile = (props) => {
-  const [imageSelected, setImageSelected] = useState("");
-  const [user,setUser] = useState([])
-  const uploadImage = () => {
+  const [image, setImage] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const uploadImage = async (e) => {
+    const files = e.target.files;
     const formData = new FormData();
-    formData.append("file", imageSelected);
-    formData.append("upload_preset", "matchini");
-    axios
-      .post("https://api.cloudinary.com/v1_1/matchini/image/upload", formData)
-      .then((response) => {
-        console.log(response);
-      });
+    formData.append("file", files[0]);
+    formData.append("upload_preset", "lu8vetbv");
+    setLoading(true);
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/matchini/image/upload",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+
+    const file = await res.json();
+    // console.log("file:", file);
+    setImage(file.secure_url);
+    setLoading(false);
   };
 
-  const getUserInfo=()=> {
-    axios.get('http://localhost:3000/getUser')
-    .then((response) => {
-     setUser(response.data)
-    })
-  }
+  useEffect(() => {
+    const data = localStorage.getItem("save-image");
+    if (data) {
+      setImage(data);
+    }
+  }, []);
 
+  useEffect(() => {
+    localStorage.setItem("save-image", image);
+  });
 
   return (
     <div className="flex items-center h-screen w-full justify-center">
@@ -34,19 +46,12 @@ const Profile = (props) => {
             />
           </button>
           <div className="photo-wrapper p-2">
-            <Image
-              className="w-32 h-32 rounded-full mx-auto"
-              cloudName="matchini"
-              publicId="https://res.cloudinary.com/matchini/image/upload/v1638896916/sample.png"
-
-            />
-            <input
-              type="file"
-              onChange={(e) => {
-                setImageSelected(e.target.files);
-              }}
-            />
-            <button onClick={uploadImage}>Upload</button>
+            {loading ? (
+              <h3>Loading...</h3>
+            ) : (
+              <img className="w-32 h-32 rounded-full mx-auto" src={image} />
+            )}
+            <input type="file" onChange={uploadImage} />
           </div>
           <div className="p-2">
             <h3 className="text-center text-xl text-gray-900 font-medium leading-8">

@@ -1,7 +1,7 @@
 import React from "react";
 import { useModal } from "react-hooks-use-modal";
 import Profile from "./Profile";
-
+import CreatePost from "./Posts/CreatePost";
 function Sidebar() {
   const [Modal, open, close] = useModal("root", {
     preventScroll: true,
@@ -12,7 +12,7 @@ function Sidebar() {
     <div class="flex flex-no-wrap">
       <div class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
         <div class="px-8">
-          <div>  <button class="text-white mt-12" onClick={open}>My Profile</button>
+          <div>  <button class="text-white mt-12" onClick={open}>Profile</button>
           <Modal >
           <Profile close={close} />
         </Modal>
@@ -632,9 +632,10 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div class="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
+      <CreatePost />
+      {/* <div class="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
         <div class="w-full h-full rounded border-dashed border-2 border-gray-300"></div>
-      </div>
+      </div> */}
     </div>
   );
 }

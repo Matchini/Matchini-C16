@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-
-import Sidebar from "./Sidebar";
-
+import CreatePost from "./Posts/CreatePost";
+import GetPosts from "./Posts/GetPosts";
+import Sidebar from "./Sidebar"
 function Commercial() {
-  const location = useLocation();
-  useEffect(() => {}, [location]);
   return (
     <div>
       <Sidebar />
+      {/* <CreatePost /> */}
+      <GetPosts />
     </div>
   );
 }
