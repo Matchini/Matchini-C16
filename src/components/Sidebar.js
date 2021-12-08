@@ -1,12 +1,26 @@
 import React from "react";
+import { useModal } from "react-hooks-use-modal";
+import Profile from "./Profile";
 
 function Sidebar() {
+  const [Modal, open, close] = useModal("root", {
+    preventScroll: true,
+    closeOnOverlayClick: false,
+  });
+
   return (
     <div class="flex flex-no-wrap">
       <div class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
         <div class="px-8">
+          <div>  <button class="text-white mt-12" onClick={open}>My Profile</button>
+          <Modal >
+          <Profile close={close} />
+        </Modal>
+        </div>
+      
           <ul class="mt-20">
             <li class="flex w-full justify-between text-gray-300 cursor-pointer items-center mb-6">
+        
               <a
                 href="javascript:void(0)"
                 class="flex items-center focus:outline-none focus:ring-2 focus:ring-white"
@@ -207,7 +221,7 @@ function Sidebar() {
                 </svg>
               </div>
               <input
-                class="bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-100 rounded w-full text-sm text-gray-300 placeholder-gray-400 bg-gray-100 pl-10 py-2"
+                class="bg-gray focus:outline-none focus:ring-1 focus:ring-gray-100 rounded w-full text-sm text-gray-300 placeholder-gray-400 bg-gray-100 pl-10 py-2"
                 type="text"
                 placeholder="Search"
               />
@@ -348,7 +362,7 @@ function Sidebar() {
         <button
           aria-label="Close sidebar"
           id="closeSideBar"
-          class="hidden h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer text-white"
+          class=" h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +624,7 @@ function Sidebar() {
                 </svg>
               </div>
               <input
-                class="bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-100  rounded w-full text-sm text-gray-300 placeholder-gray-400 bg-gray-100 pl-10 py-2"
+                class="bg-gray focus:outline-none focus:ring-1 focus:ring-gray-100  rounded w-full text-sm text-gray-300 placeholder-gray-400 bg-gray-100 pl-10 py-2"
                 type="text"
                 placeholder="Search"
               />

@@ -1,10 +1,22 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 const UpdateProfile = () => {
   
+  const history = useHistory();
+
+const handleUpdate=()=> {
+  axios.put('http://localhost:3000/putUser')
+
+    }
+
+
+
+
 return (
     <div
       class="min-h-screen flex flex-col items-center justify-center bg-gray-100"
     >
+     
       <div
         class="
           flex flex-col
@@ -20,6 +32,23 @@ return (
           max-w-md
         "
       >
+         <div>
+        <svg
+          onClick={() => history.goBack()}
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-10 w-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+          />
+        </svg>
+      </div>
         <div class="font-medium self-center text-xl sm:text-3xl text-gray-800">
           Update your profile
         </div>

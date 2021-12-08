@@ -8,6 +8,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Commercial from "./components/Commercial";
+import UpdateProfile from "./components/UpdateProfile";
 // 215341427022-qpsrq4730unqiq2v0e0eci2valevqr1b.apps.googleusercontent.com
 class App extends Component {
   render() {
@@ -33,7 +34,9 @@ class App extends Component {
             <Route path="/Commercial" exact>
               <Commercial />
             </Route>
-
+<Route path="/edit" exact>
+<UpdateProfile />
+</Route>
             <LandingPage />
             <Footer />
           </Switch>
