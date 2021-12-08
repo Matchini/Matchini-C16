@@ -16,6 +16,15 @@ body {
   font-size: 15px;
 }
 
+.sidenav{
+  left:-100%;
+  transition: all 1s;
+}
+
+.sidenav.active{
+left:0;
+}
+
 .top {
   background: #009191;
   color: #333;
