@@ -30,6 +30,7 @@ class App extends Component {
             <Route path="/commercial" exact>
               <Commercial />
             </Route>
+
             <LandingPage />
             <Footer />
           </Switch>
