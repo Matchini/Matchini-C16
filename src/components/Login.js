@@ -31,17 +31,6 @@ const Login = () => {
   };
 
   const responseGoogleSuccess = () => {
-    // axios({
-    //   method: "POST",
-    //   url: "http://localhost:3000/googlelogin",
-    //   data: { tokenId: response.tokenId },
-    // })
-    //   .then((res) => {
-    //     console.log(res, "done wokring login google");
-    //   })
-    //   .catch((err) => {
-    //     console.log(err, "errrr");
-    //   });
     history.push("/commercial");
   };
   const responseGoogleFail = () => {
@@ -427,6 +416,7 @@ const Login = () => {
                   </div>
                 </div>
               </div>
+              <ToastContainer />
             </div>
           </div>
         </div>
