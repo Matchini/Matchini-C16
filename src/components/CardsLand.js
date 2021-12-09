@@ -17,7 +17,7 @@ const CardsLand = () => {
                   alt="blog"
                 />
                 <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
-                  <h2 class="text-base font-medium text-indigo-300 mb-1">
+                  <h2 class="text-base font-medium text-green-700 mb-1">
                     October 29, 2021
                   </h2>
                   <h1 class="text-2xl font-semibold mb-3">
@@ -86,7 +86,7 @@ const CardsLand = () => {
                   alt="blog"
                 />
                 <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
-                  <h2 class="text-base font-medium text-indigo-300 mb-1">
+                  <h2 class="text-base font-medium text-green-700 mb-1">
                     October 29, 2021
                   </h2>
                   <h1 class="text-2xl font-semibold mb-3">
@@ -155,7 +155,7 @@ const CardsLand = () => {
                   alt="blog"
                 />
                 <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
-                  <h2 class="text-base font-medium text-indigo-300 mb-1">
+                  <h2 class="text-base font-medium text-green-700 mb-1">
                     October 29, 2021
                   </h2>
                   <h1 class="text-2xl font-semibold mb-3">Lakes are silent</h1>
