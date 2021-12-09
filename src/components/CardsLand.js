@@ -2,8 +2,11 @@ import React from "react";
 import Pub from "../assets/player.png";
 import Pubb from "../assets/player2.png";
 import Pubbb from "../assets/player3.png";
+import { useHistory } from "react-router-dom";
 
 const CardsLand = () => {
+  const history = useHistory();
+
   return (
     <div>
       <section class="md:h-full flex items-center text-gray-600">
@@ -30,7 +33,10 @@ const CardsLand = () => {
                     accusamus?
                   </p>
                   <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0">
+                    <a
+                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
+                      onClick={() => history.push("/Register")}
+                    >
                       Read More
                       <svg
                         class="w-4 h-4 ml-2"
@@ -99,7 +105,10 @@ const CardsLand = () => {
                     accusamus?
                   </p>
                   <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0">
+                    <a
+                      class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"
+                      onClick={() => history.push("/Register")}
+                    >
                       Read More
                       <svg
                         class="w-4 h-4 ml-2"
@@ -166,7 +175,10 @@ const CardsLand = () => {
                     accusamus?
                   </p>
                   <div class="flex items-center flex-wrap ">
-                    <a class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0">
+                    <a
+                      class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"
+                      onClick={() => history.push("/Register")}
+                    >
                       Read More
                       <svg
                         class="w-4 h-4 ml-2"
