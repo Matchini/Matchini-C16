@@ -1,15 +1,10 @@
 import React from "react";
-
 const Home = () => {
+  // onClick={(event) => (window.location.href = "/")}
+
   return (
     <div className="wrap-body">
       <div className="top flex items-center">
-        
-        <img
-          onClick={(event) => (window.location.href = "/")}
-          className="h-12 w-20 ml-12"
-          src="https://lh3.googleusercontent.com/proxy/qboTH2huBGtNTLBLo7QiMtGB37XP2cRAmxm7sB6t86pf53zGvDydsOUB3QAORfBXoJztCTb5fSaPci9snvUD8Us0WcYc-lGhCRFZxjiNLZXyUIkpUnTO2xZ5dkKrXYycUYUAu9_r-i_Iz_eeCxb-44ro1g"
-        />
         <div className="zerogrid">
           <div className="row">
             <div className="f-left">
