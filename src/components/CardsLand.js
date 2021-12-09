@@ -106,7 +106,7 @@ const CardsLand = () => {
                   </p>
                   <div class="flex items-center flex-wrap ">
                     <a
-                      class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"
+                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => history.push("/Register")}
                     >
                       Read More
@@ -176,7 +176,7 @@ const CardsLand = () => {
                   </p>
                   <div class="flex items-center flex-wrap ">
                     <a
-                      class="text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"
+                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => history.push("/Register")}
                     >
                       Read More

@@ -68,7 +68,7 @@ const Footer = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        href="https://www.creative-tim.com/presentation?ref=mtk"
+                        href=""
                         target="_blank"
                         rel="noreferrer"
                         className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
@@ -76,34 +76,15 @@ const Footer = () => {
                         About Us
                       </a>
                     </li>
+
                     <li>
-                      <a
-                        className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
-                        target="_blank"
-                        href=" https://www.creative-tim.com/blog?ref=mtk"
-                      >
-                        Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.github.com/creativetimofficial?ref=mtk"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
-                      >
-                        Github
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href=" https://www.creative-tim.com/templates/free?ref=mtk"
+                      <p
                         target="_blank"
                         rel="noreferrer"
                         className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
                       >
                         Free Products
-                      </a>
+                      </p>
                     </li>
                   </ul>
                 </div>
