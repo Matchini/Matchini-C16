@@ -1,10 +1,8 @@
 import React from "react";
-import Pub from "../assets/player.png";
 import { useHistory } from "react-router-dom";
 import Footer from "./Footer";
-import Com from "./Com";
-import Comm from "./Comm";
-import Commm from "./Commm";
+
+import CardsLand from "./CardsLand";
 
 function LandingPage() {
   const history = useHistory();
@@ -51,16 +49,17 @@ function LandingPage() {
         </div>
       </nav>
 
-      <div className="grid grid-cols-3 gap-4 ">
-        <div>
+      <div>
+        {/* <div class="p-4 sm:w-1/2 lg:w-1/3">
           <Comm />
         </div>
-        <div>
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
           <Com />
         </div>
-        <div>
+        <div class="p-4 sm:w-1/2 lg:w-1/3">
           <Commm />
-        </div>
+        </div> */}
+        <CardsLand />
       </div>
       <Footer />
     </div>
