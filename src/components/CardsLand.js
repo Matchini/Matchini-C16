@@ -7,7 +7,7 @@ const CardsLand = () => {
   return (
     <div>
       <section class="md:h-full flex items-center text-gray-600">
-        <div class="container px-5 py-16 mx-auto">
+        <div class="container px-5 py-2 mx-auto">
           <div class="flex flex-wrap -m-4">
             <div class="p-4 sm:w-1/2 lg:w-1/3">
               <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -16,7 +16,7 @@ const CardsLand = () => {
                   src={Pub}
                   alt="blog"
                 />
-                <div class="p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
                   <h2 class="text-base font-medium text-indigo-300 mb-1">
                     October 29, 2021
                   </h2>
@@ -85,7 +85,7 @@ const CardsLand = () => {
                   src={Pubb}
                   alt="blog"
                 />
-                <div class="p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
                   <h2 class="text-base font-medium text-indigo-300 mb-1">
                     October 29, 2021
                   </h2>
@@ -154,7 +154,7 @@ const CardsLand = () => {
                   src={Pubbb}
                   alt="blog"
                 />
-                <div class="p-6 hover:bg-indigo-700 hover:text-white transition duration-300 ease-in">
+                <div class="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
                   <h2 class="text-base font-medium text-indigo-300 mb-1">
                     October 29, 2021
                   </h2>
