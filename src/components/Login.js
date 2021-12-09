@@ -37,108 +37,25 @@ const Login = () => {
     history.push("/");
   };
   return (
-    // <div className="w-1/2 md:w-full">
-    //   <div>
-    //     <svg
-    //       onClick={() => history.goBack()}
-    //       xmlns="http://www.w3.org/2000/svg"
-    //       className="h-10 w-10"
-    //       fill="none"
-    //       viewBox="0 0 24 24"
-    //       stroke="currentColor"
-    //     >
-    //       <path
-    //         strokeLinecap="round"
-    //         strokeLinejoin="round"
-    //         strokeWidth="2"
-    //         d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
-    //       />
-    //     </svg>
-    //   </div>
-    //   <div>
-    //     <div className="bg-white mt-12 w-full justify-center items-center px-12">
-    //       <div>
-    //         <form onSubmit={handleSubmit(onSubmit)}>
-    //           <div className="text-center">
-    //             <span className="text-2xl font-bold">Welcome back</span>
-    //           </div>
-    //           <div className="my-8">
-    //             <label className="block text-md" htmlFor="email">
-    //               Email
-    //             </label>
-    //             <input
-    //               className="px-4 w-full h-10 bg-gray-100 py-2 rounded-md text-sm outline-none"
-    //               type="email"
-    //               name="password"
-    //               {...register("email")}
-    //               placeholder="write your email here"
-    //             />
-    //           </div>
-    //           <div className="mt-6">
-    //             <label className="block text-md" htmlFor="password">
-    //               Password
-    //             </label>
-    //             <input
-    //               className="px-4 w-full h-10 bg-gray-100 py-2 rounded-md text-sm outline-none"
-    //               type="password"
-    //               name="password"
-    //               {...register("password")}
-    //               placeholder="password here ..."
-    //             />
-    //           </div>
-
-    //           <div className="flex justify-between pt-6">
-    //             <div>
-    //               <input
-    //                 className="cursor-pointer"
-    //                 type="checkbox"
-    //                 name="rememberme"
-    //               />
-    //               <span className="text-sm ml-2">Remember Me</span>
-    //             </div>
-    //             <span className="text-sm text-green-600 hover:underline cursor-pointer">
-    //               Forgot password?
-    //             </span>
-    //           </div>
-    //           <div className="">
-    //             <div className="flex justify-center">
-    //               <button
-    //                 type="submit"
-    //                 className=" mt-6 w-3/6 h-12 text-xl bg-first hover:bg-green-600 text-white py-2 rounded-md transition duration-100"
-    //               >
-    //                 LogIn
-    //               </button>
-    //             </div>
-    //             <div className="flex justify-center mt-6">
-    //               <p> Dont have an account? </p>
-    //               <a
-    //                 onClick={() => history.push("/Register")}
-    //                 className="text-first ml-2 hover:text-green-600 underline font-semibold"
-    //               >
-    //                 Sign Up
-    //               </a>
-    //             </div>
-    //             <div className="flex justify-center mt-6">
-    //               <p className="text-lg font-semibold">OR</p>
-    //             </div>
-    //             <div className="flex space-x-2 mt-6 h-12 justify-center items-center text-white py-2 rounded-md transition ">
-    //               <GoogleLogin
-    //                 className="bg-transparent"
-    //                 clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
-    //                 buttonText="Login with your google account"
-    //                 onSuccess={responseGoogleSuccess}
-    //                 onFailure={responseGoogleFail}
-    //                 cookiePolicy={"single_host_origin"}
-    //               />
-    //             </div>
-    //             <ToastContainer />
-    //           </div>
-    //         </form>
-    //       </div>
-    //     </div>
-    //   </div>
     <div>
       <div class="min-w-screen min-h-screen bg-gray-100 flex items-center justify-center px-5 py-5">
+        <div>
+          <svg
+            onClick={() => history.goBack()}
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+            />
+          </svg>
+        </div>
         <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
           <div class="md:flex w-full">
             <div class="hidden md:block w-1/2 bg-white-500 py-10 px-10">
@@ -425,14 +342,14 @@ const Login = () => {
       <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
         <div>
           <a
-            title="Buy me a beer"
-            href="https://www.buymeacoffee.com/scottwindon"
+            title="Matchini"
+            href=""
             target="_blank"
             class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
           >
             <img
               class="object-cover object-center w-full h-full rounded-full"
-              src="https://i.pinimg.com/originals/60/fd/e8/60fde811b6be57094e0abc69d9c2622a.jpg"
+              src="https://dictionary.cambridge.org/fr/images/thumb/footba_noun_002_14598.jpg?version=5.0.199"
             />
           </a>
         </div>
