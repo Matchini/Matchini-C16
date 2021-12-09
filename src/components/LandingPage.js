@@ -30,15 +30,6 @@ function LandingPage() {
       </nav>
 
       <div>
-        {/* <div class="p-4 sm:w-1/2 lg:w-1/3">
-          <Comm />
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-          <Com />
-        </div>
-        <div class="p-4 sm:w-1/2 lg:w-1/3">
-          <Commm />
-        </div> */}
         <CardsLand />
       </div>
       <Footer />
