@@ -23,7 +23,7 @@ const Home = () => {
             </div>
             <div>
               <div
-                className="text-white "
+                className="text-white cursor-pointer"
                 onClick={(event) => (window.location.href = "/")}
               >
                 {" "}
