@@ -95,7 +95,7 @@ const Footer = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        href="https://github.com/creativetimofficial/material-tailwind/blob/main/LICENSE.md?ref=mtk"
+                        href=""
                         target="_blank"
                         rel="noreferrer"
                         className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
@@ -103,35 +103,16 @@ const Footer = () => {
                         MIT License
                       </a>
                     </li>
+
                     <li>
-                      <a
-                        href="https://github.com/creativetimofficial/material-tailwind/blob/main/CONTRIBUTING.md?ref=mtk"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
-                      >
-                        Contribute
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/creativetimofficial/material-tailwind/blob/main/CODE_OF_CONDUCT.md?ref=mtk"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
-                      >
-                        Code of Conduct
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://creative-tim.com/contact-us?ref=mtk"
+                      <p
+                        href=""
                         target="_blank"
                         rel="noreferrer"
                         className="text-gray-700 hover:text-gray-900 block pb-2 text-sm"
                       >
                         Contact Us
-                      </a>
+                      </p>
                     </li>
                   </ul>
                 </div>
