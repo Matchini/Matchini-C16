@@ -34,7 +34,7 @@ const CardsLand = () => {
                   </p>
                   <div class="flex items-center flex-wrap ">
                     <a
-                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
+                      className=" cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => history.push("/Register")}
                     >
                       Read More
@@ -51,7 +51,7 @@ const CardsLand = () => {
                         <path d="M12 5l7 7-7 7"></path>
                       </svg>
                     </a>
-                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="cursor-not-allowed  mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                       <svg
                         class="w-4 h-4 mr-1"
                         stroke="currentColor"
@@ -66,7 +66,7 @@ const CardsLand = () => {
                       </svg>
                       542K.2
                     </span>
-                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="cursor-not-allowed inline-flex items-center leading-none text-sm">
                       <svg
                         class="w-4 h-4 mr-1"
                         stroke="currentColor"
@@ -106,7 +106,7 @@ const CardsLand = () => {
                   </p>
                   <div class="flex items-center flex-wrap ">
                     <a
-                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
                       onClick={() => history.push("/Register")}
                     >
                       Read More
@@ -123,7 +123,7 @@ const CardsLand = () => {
                         <path d="M12 5l7 7-7 7"></path>
                       </svg>
                     </a>
-                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="cursor-not-allowed  mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                       <svg
                         class="w-4 h-4 mr-1"
                         stroke="currentColor"
@@ -138,7 +138,7 @@ const CardsLand = () => {
                       </svg>
                       485K.9
                     </span>
-                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="cursor-not-allowed inline-flex items-center leading-none text-sm">
                       <svg
                         class="w-4 h-4 mr-1"
                         stroke="currentColor"
@@ -174,9 +174,9 @@ const CardsLand = () => {
                     incidunt ipsam reprehenderit fuga! Dolores quisquam eius cum
                     accusamus?
                   </p>
-                  <div class="flex items-center flex-wrap ">
+                  <div class="flex items-center flex-wrap cursor-pointer ">
                     <a
-                      class="text-green-700 inline-flex items-center md:mb-2 lg:mb-0"
+                      className="cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0 "
                       onClick={() => history.push("/Register")}
                     >
                       Read More
@@ -193,9 +193,9 @@ const CardsLand = () => {
                         <path d="M12 5l7 7-7 7"></path>
                       </svg>
                     </a>
-                    <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <span className="cursor-not-allowed  text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
                       <svg
-                        class="w-4 h-4 mr-1"
+                        class="w-4 h-4 mr-1 "
                         stroke="currentColor"
                         stroke-width="2"
                         fill="none"
@@ -208,7 +208,7 @@ const CardsLand = () => {
                       </svg>
                       784K
                     </span>
-                    <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                    <span className="cursor-not-allowed text-gray-400 inline-flex items-center leading-none text-sm">
                       <svg
                         class="w-4 h-4 mr-1"
                         stroke="currentColor"
