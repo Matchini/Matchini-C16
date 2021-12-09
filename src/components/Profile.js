@@ -39,20 +39,32 @@ const Profile = (props) => {
     <div className="flex items-center h-screen w-full justify-center">
       <div className="max-w-full">
         <div className="bg-white shadow-xl rounded-lg py-3">
-          <button onClick={props.close}>
-            <img
-              alt="exit"
-              src="https://img.icons8.com/ios/50/000000/cancel.png"
+          <svg
+            onClick={props.close}
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-10 w-10"
+            fill="none"
+            viewBox="0 0 24 24"
+            
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
             />
-          </button>
+          </svg>
           <div className="photo-wrapper p-2">
             {loading ? (
               <h3>Loading...</h3>
             ) : (
               <img className="w-32 h-32 rounded-full mx-auto" src={image} />
             )}
+             <br/>
             <input type="file" onChange={uploadImage} />
           </div>
+          <br/>
           <div className="p-2">
             <h3 className="text-center text-xl text-gray-900 font-medium leading-8">
               name is here

@@ -4,12 +4,6 @@ const UpdateProfile = () => {
   
   const history = useHistory();
 
-const handleUpdate=()=> {
-  axios.put('http://localhost:3000/putUser')
-
-    }
-
-
 
 
 return (
