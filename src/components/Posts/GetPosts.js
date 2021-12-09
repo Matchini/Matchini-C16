@@ -20,7 +20,7 @@ const GetPosts = () => {
     },
     setTimeout(() => {
       getData();
-    }, 5000)
+    }, 3000)
   );
 
   return (
