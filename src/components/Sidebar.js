@@ -1,8 +1,10 @@
 import React from "react";
 
-function Sidebar() {
+
+function Sidebar({show}) {
   return (
-    <div class="flex flex-no-wrap">
+    
+    <div class="flex flex-no-wrap ">
       <div class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
         <div class="px-8">
           <ul class="mt-20">
