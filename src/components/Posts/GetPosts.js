@@ -11,17 +11,23 @@ const GetPosts = () => {
       .catch((err) => {
         console.log(err);
       });
-    console.log(posts);
   };
 
-  useEffect(
-    () => {
+  // useEffect(
+  //   () => {
+  //     getData();
+  //   },
+  //   setTimeout(() => {
+  //     getData();
+  //   }, 2000)
+  // );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
       getData();
-    },
-    setTimeout(() => {
-      getData();
-    }, 3000)
-  );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
