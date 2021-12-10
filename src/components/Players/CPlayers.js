@@ -10,8 +10,7 @@ const CPlayers = () => {
   const onSubmit = (data) => {
     axios
       .post("https://matchini.herokuapp.com/player", data)
-      .then((res) => {
-        console.log(res.data);
+      .then(() => {
         reset();
       })
       .catch((err) => {
