@@ -52,7 +52,10 @@ const Nav = () => {
         </div>
       </div>
       <div>
-        <button onClick={open} class="text-2xl">
+        <button
+          onClick={open}
+          class="font-mono font-bold text-green-700 text-xl hover:text-white px-4 py-2 rounded hover:bg-green-700 mr-2"
+        >
           Profile
         </button>
 
