@@ -33,12 +33,6 @@ const Nav = () => {
         <div class="text-md font-bold text-green-700 lg:flex-grow">
           <a
             href="#responsive-header"
-            class=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-green-700 mr-2"
-          >
-            Home
-          </a>
-          <a
-            href="#responsive-header"
             class="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-green-700 mr-2"
           >
             Products
@@ -55,13 +49,12 @@ const Nav = () => {
           >
             About
           </a>
-          
         </div>
       </div>
       <div>
-        <button onClick={open}>Profile here</button>
+        <button onClick={open}>Profile</button>
 
-        <Modal >
+        <Modal>
           <Profile close={close} />
         </Modal>
       </div>
