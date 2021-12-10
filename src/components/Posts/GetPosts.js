@@ -2,15 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 const GetPosts = () => {
   const [posts, setPosts] = useState([]);
-  const [arrived, setarrived] = useState(null);
   //get stored data from DB
   const getData = () => {
     axios
       .get(`https://matchini.herokuapp.com/match`)
       .then((res) => {
         setPosts(res.data);
-        setarrived(true);
-        console.log(posts);
       })
       .catch((err) => {
         console.log(err);
@@ -18,14 +15,7 @@ const GetPosts = () => {
   };
   useEffect(() => {
     getData();
-  }, [arrived]);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     getData();
-  //   }, 1000);
-  //   return () => clearInterval(interval);
-  // }, []);
+  });
 
   return (
     <div>
