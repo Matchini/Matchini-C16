@@ -2,14 +2,15 @@ import React from "react";
 import { useModal } from "react-hooks-use-modal";
 import Profile from "./Profile";
 import CreatePost from "./Posts/CreatePost";
-function Sidebar() {
+function Sidebar({show}) {
   const [Modal, open, close] = useModal("root", {
     preventScroll: true,
     closeOnOverlayClick: false,
   });
 
   return (
-    <div class="flex flex-no-wrap">
+    
+    <div class="flex flex-no-wrap ">
       <div class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
         <div class="px-8">
           <div>  <button class="text-white mt-12" onClick={open}>Profile</button>
