@@ -14,11 +14,8 @@ const GetPlayers = () => {
       });
   };
   useEffect(() => {
-    const interval = setInterval(() => {
-      getData();
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+    getData();
+  });
   return (
     <div>
       {posts.map((e, key) => {
