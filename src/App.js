@@ -11,6 +11,7 @@ import Commercial from "./components/Commercial";
 import CreateGame from "./components/CardsChoice/CreateGame";
 import CreatePlayer from "./components/CardsChoice/CreatePlayer";
 import CommercialSec from "./components/CommercialSec";
+import CommercialThird from "./components/CommercialThird";
 // 215341427022-qpsrq4730unqiq2v0e0eci2valevqr1b.apps.googleusercontent.com
 class App extends Component {
   render() {
@@ -36,12 +37,15 @@ class App extends Component {
             <Route path="/commercialsec" exact>
               <CommercialSec />
             </Route>
-            <Route path="/creategame" exact>
+            <Route path="/commercialthird" exact>
+              <CommercialThird />
+            </Route>
+            {/* <Route path="/creategame" exact>
               <CreateGame />
             </Route>
             <Route path="/createplayer" exact>
               <CreatePlayer />
-            </Route>
+            </Route> */}
 
             <LandingPage />
             <Footer />

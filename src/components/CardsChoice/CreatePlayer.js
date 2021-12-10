@@ -23,9 +23,9 @@ const CreatePlayer = () => {
               <a
                 className="cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0 "
                 //is not ready yet the component where to navigate
-                onClick={() => history.push("/commercial")}
+                onClick={() => history.push("/commercialthird")}
               >
-                Find games
+                Create your opportunity
                 <svg
                   class="w-4 h-4 ml-2"
                   viewBox="0 0 24 24"
