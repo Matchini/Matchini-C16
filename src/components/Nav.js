@@ -52,7 +52,9 @@ const Nav = () => {
         </div>
       </div>
       <div>
-        <button onClick={open}>Profile</button>
+        <button onClick={open} class="text-2xl">
+          Profile
+        </button>
 
         <Modal>
           <Profile close={close} />
