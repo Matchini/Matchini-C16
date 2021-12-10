@@ -1,8 +1,11 @@
 import axios from "axios";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useHistory } from "react-router-dom";
 
 const CreatePost = () => {
+  const history = useHistory();
+
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
@@ -103,6 +106,12 @@ const CreatePost = () => {
         </div>
         <button className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">
           submit
+        </button>
+        <button
+          onClick={() => history.push("/commercialthird")}
+          className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
+        >
+          search players
         </button>
       </div>
     </form>

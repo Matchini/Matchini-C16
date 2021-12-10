@@ -84,7 +84,7 @@ const CPlayers = () => {
             autoComplete="off"
             name="role"
             className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-            placeholder="win e la3ba"
+            placeholder="what's your position in the field"
             {...register("role")}
           />
         </div>
