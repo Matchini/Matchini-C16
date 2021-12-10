@@ -263,67 +263,67 @@ const Login = () => {
                 />
               </svg>
             </div>
-            <div class="w-full md:w-1/2 py-48 px-5 md:px-24 flex flex-col justify-center ">
-              <div class="text-center mb-10">
-                <h1 class="font-bold text-3xl text-gray-900">Login</h1>
+            <div className="w-full md:w-1/2 py-48 px-5 md:px-24 flex flex-col justify-center ">
+              <div className="text-center mb-10">
+                <h1 className="font-bold text-3xl text-gray-900">Login</h1>
                 <p>Enter your information to login</p>
               </div>
               <div>
-                <div class="flex -mx-3">
-                  <div class="w-full px-3 mb-5">
-                    <label for="" class="text-xs font-semibold px-1">
+                <div className="flex -mx-3">
+                  <div className="w-full px-3 mb-5">
+                    <label for="" className="text-xs font-semibold px-1">
                       Email
                     </label>
-                    <div class="flex">
-                      <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                        <i class="mdi mdi-email-outline text-gray-400 text-lg"></i>
+                    <div className="flex">
+                      <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                        <i className="mdi mdi-email-outline text-gray-400 text-lg"></i>
                       </div>
                       <input
                         type="email"
-                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-green-600"
+                        className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-green-600"
                         placeholder="johnsmith@example.com"
                         {...register("email")}
                       />
                     </div>
                   </div>
                 </div>
-                <div class="flex -mx-3">
-                  <div class="w-full px-3 mb-12">
-                    <label for="" class="text-xs font-semibold px-1">
+                <div className="flex -mx-3">
+                  <div className="w-full px-3 mb-12">
+                    <label for="" className="text-xs font-semibold px-1">
                       Password
                     </label>
-                    <div class="flex">
-                      <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
-                        <i class="mdi mdi-lock-outline text-gray-400 text-lg"></i>
+                    <div className="flex">
+                      <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center">
+                        <i className="mdi mdi-lock-outline text-gray-400 text-lg"></i>
                       </div>
                       <input
                         type="password"
-                        class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-green-600"
+                        className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-green-600"
                         placeholder="************"
                         {...register("password")}
                       />
                     </div>
                   </div>
                 </div>
-                <div class="flex -mx-3">
-                  <div class="w-full px-3 mb-5">
+                <div className="flex -mx-3">
+                  <div className="w-full px-3 mb-5">
                     <button
                       onClick={handleSubmit(onSubmit)}
-                      class="block w-36 max-w-xs mx-auto bg-green-700 hover:bg-green-300 focus:bg-green-500 text-white rounded-lg px-3 py-3 font-semibold"
+                      className="block w-36 max-w-xs mx-auto bg-green-700 hover:bg-green-300 focus:bg-green-500 text-white rounded-lg px-3 py-3 font-semibold"
                     >
                       LogIn
                     </button>
                   </div>
                 </div>
                 <div className="flex justify-center mb-4">
-                <GoogleLogin
-                  className="bg-transparent "
-                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
-                  buttonText="Login with your google account"
-                  onSuccess={responseGoogleSuccess}
-                  onFailure={responseGoogleFail}
-                  cookiePolicy={"single_host_origin"}
-                />
+                  <GoogleLogin
+                    className="bg-transparent "
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
+                  />
                 </div>
                 <div className="flex justify-center mb-6">
                   <p> Dont have an account? </p>
@@ -334,7 +334,6 @@ const Login = () => {
                     Sign Up
                   </a>
                 </div>
-                
               </div>
               <ToastContainer />
             </div>
@@ -342,16 +341,16 @@ const Login = () => {
         </div>
       </div>
 
-      <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
+      <div className="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
         <div>
           <a
             title="Matchini"
             href=""
             target="_blank"
-            class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
+            className="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12"
           >
             <img
-              class="object-cover object-center w-full h-full rounded-full"
+              className="object-cover object-center w-full h-full rounded-full"
               src="https://dictionary.cambridge.org/fr/images/thumb/footba_noun_002_14598.jpg?version=5.0.199"
             />
           </a>

@@ -3,13 +3,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 
-const CreatePost = () => {
+const CPlayers = () => {
   const history = useHistory();
 
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://matchini.herokuapp.com/match", data)
+      .post("https://matchini.herokuapp.com/player", data)
       .then((res) => {
         console.log(res.data);
         reset();
@@ -22,10 +22,10 @@ const CreatePost = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex lg:flex-col flex-col items-center bg-white border-2 py-8 px-4 mt-8 ml-24 mr-24">
-        create game
+        create your profile
         <div className="flex flex-col w-full">
           <label
-            htmlFor="email"
+            htmlFor="fullName"
             className="text-gray-800 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
           >
             Full Name
@@ -41,10 +41,10 @@ const CreatePost = () => {
         </div>{" "}
         <div className="flex flex-col w-full">
           <label
-            htmlFor="Date"
+            htmlFor="time"
             className="text-gray-800 mt-4 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
           >
-            Date
+            Available Time
           </label>
           <input
             id="time"
@@ -53,7 +53,7 @@ const CreatePost = () => {
             autoComplete="off"
             className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
             placeholder="Placeholder"
-            {...register("time")}
+            {...register("availableTime")}
           />
         </div>
         <div className="flex flex-col w-full">
@@ -74,18 +74,18 @@ const CreatePost = () => {
         </div>
         <div className="flex flex-col w-full">
           <label
-            htmlFor="stadium"
+            htmlFor="role"
             className="text-gray-800 mt-4 dark:text-gray-100 text-sm font-bold leading-tight tracking-normal mb-2"
           >
-            stadium
+            role
           </label>
           <input
-            id="stadium"
+            id="role"
             autoComplete="off"
-            name="stadium"
+            name="role"
             className="text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-100 dark:focus:border-green-100 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
-            placeholder="win e la3ba"
-            {...register("stadium")}
+            placeholder="what's your position in the field"
+            {...register("role")}
           />
         </div>
         <div className="flex flex-col w-full">
@@ -108,14 +108,14 @@ const CreatePost = () => {
           submit
         </button>
         <button
-          onClick={() => history.push("/commercialthird")}
+          onClick={() => history.push("/commercialsec")}
           className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
         >
-          search players
+          Search Games
         </button>
       </div>
     </form>
   );
 };
 
-export default CreatePost;
+export default CPlayers;

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-const GetPosts = () => {
+
+const GetPlayers = () => {
   const [posts, setPosts] = useState([]);
   const getData = () => {
     axios
-      .get(`https://matchini.herokuapp.com/match`)
+      .get(`https://matchini.herokuapp.com/player`)
       .then((res) => {
         setPosts(res.data);
       })
@@ -12,23 +13,12 @@ const GetPosts = () => {
         console.log(err);
       });
   };
-
-  // useEffect(
-  //   () => {
-  //     getData();
-  //   },
-  //   setTimeout(() => {
-  //     getData();
-  //   }, 2000)
-  // );
-
   useEffect(() => {
     const interval = setInterval(() => {
       getData();
     }, 1000);
     return () => clearInterval(interval);
   }, []);
-
   return (
     <div>
       {posts.map((e, key) => {
@@ -66,7 +56,7 @@ const GetPosts = () => {
                     City : {e.city} {" *"}
                   </div>
                   <div>
-                    {"|* "} Stadium : {e.stadium} {" *"}
+                    {"|* "} role : {e.role} {" *"}
                   </div>
 
                   <div className="flex">
@@ -85,7 +75,7 @@ const GetPosts = () => {
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    time : {e.time} {" *"}
+                    time : {e.availableTime} {" *"}
                   </div>
                   <div>
                     {"|* "} Phone : {e.number}
@@ -100,4 +90,4 @@ const GetPosts = () => {
   );
 };
 
-export default GetPosts;
+export default GetPlayers;
