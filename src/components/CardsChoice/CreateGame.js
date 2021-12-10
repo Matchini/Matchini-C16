@@ -7,7 +7,7 @@ const CreateGame = () => {
 
   return (
     <div>
-      <div class="p-4 sm:w-1/2 lg:w-1/3">
+      <div class="p-4 sm:w-1/2 lg:w-1/2">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
           <img
             class=" w-full object-cover object-center"
@@ -22,9 +22,9 @@ const CreateGame = () => {
             <div class="flex items-center flex-wrap cursor-pointer ">
               <a
                 className="cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0 "
-                onClick={() => history.push("/createplayer")}
+                onClick={() => history.push("/commercialsec")}
               >
-                Find players
+                Create your game from here
                 <svg
                   class="w-4 h-4 ml-2"
                   viewBox="0 0 24 24"

@@ -7,7 +7,7 @@ const CreatePlayer = () => {
 
   return (
     <div>
-      <div class="p-4 sm:w-1/2 lg:w-1/3">
+      <div class="p-4 sm:w-1/2 lg:w-1/2">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
           <img
             class=" w-full object-cover object-center"
