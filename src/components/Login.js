@@ -263,7 +263,7 @@ const Login = () => {
                 />
               </svg>
             </div>
-            <div class="w-full md:w-1/2 py-48 px-5 md:px-24">
+            <div class="w-full md:w-1/2 py-48 px-5 md:px-24 flex flex-col justify-center ">
               <div class="text-center mb-10">
                 <h1 class="font-bold text-3xl text-gray-900">Login</h1>
                 <p>Enter your information to login</p>
@@ -305,23 +305,6 @@ const Login = () => {
                     </div>
                   </div>
                 </div>
-                <GoogleLogin
-                  className="bg-transparent"
-                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
-                  buttonText="Login with your google account"
-                  onSuccess={responseGoogleSuccess}
-                  onFailure={responseGoogleFail}
-                  cookiePolicy={"single_host_origin"}
-                />
-                <div className="flex justify-center mb-6">
-                  <p> Dont have an account? </p>
-                  <a
-                    onClick={() => history.push("/Register")}
-                    className="text-first ml-2 hover:text-green-600 underline font-semibold"
-                  >
-                    Sign Up
-                  </a>
-                </div>
                 <div class="flex -mx-3">
                   <div class="w-full px-3 mb-5">
                     <button
@@ -332,6 +315,26 @@ const Login = () => {
                     </button>
                   </div>
                 </div>
+                <div className="flex justify-center mb-4">
+                <GoogleLogin
+                  className="bg-transparent "
+                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                  buttonText="Login with your google account"
+                  onSuccess={responseGoogleSuccess}
+                  onFailure={responseGoogleFail}
+                  cookiePolicy={"single_host_origin"}
+                />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <p> Dont have an account? </p>
+                  <a
+                    onClick={() => history.push("/Register")}
+                    className="text-first ml-2 hover:text-green-600 underline font-semibold"
+                  >
+                    Sign Up
+                  </a>
+                </div>
+                
               </div>
               <ToastContainer />
             </div>

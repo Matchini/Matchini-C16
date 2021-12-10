@@ -359,23 +359,6 @@ const Register = () => {
                     </div>
                   </div>
                 </div>
-                <GoogleLogin
-                  className="bg-transparent"
-                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
-                  buttonText="Login with your google account"
-                  onSuccess={responseGoogleSuccess}
-                  onFailure={responseGoogleFail}
-                  cookiePolicy={"single_host_origin"}
-                />
-                <div className="flex justify-center mb-6">
-                  <p> Already have an account? </p>
-                  <a
-                    onClick={() => history.push("/Login")}
-                    className="text-first ml-2 hover:text-green-600 underline font-semibold"
-                  >
-                    Login
-                  </a>
-                </div>
                 <div class="flex -mx-3">
                   <div class="w-full px-3 mb-5">
                     <button
@@ -386,6 +369,26 @@ const Register = () => {
                     </button>
                   </div>
                 </div>
+                <div className="flex justify-center mb-4">
+                <GoogleLogin
+                  className="bg-transparent"
+                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                  buttonText="Login with your google account"
+                  onSuccess={responseGoogleSuccess}
+                  onFailure={responseGoogleFail}
+                  cookiePolicy={"single_host_origin"}
+                />
+                </div>
+                <div className="flex justify-center mb-6">
+                  <p> Already have an account? </p>
+                  <a
+                    onClick={() => history.push("/Login")}
+                    className="text-first ml-2 hover:text-green-600 underline font-semibold"
+                  >
+                    Login
+                  </a>
+                </div>
+                
               </div>
               <ToastContainer />
             </div>
