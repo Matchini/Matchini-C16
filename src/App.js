@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Commercial from "./components/Commercial";
+import CreateGame from "./components/CardsChoice/CreateGame";
+import CreatePlayer from "./components/CardsChoice/CreatePlayer";
 // 215341427022-qpsrq4730unqiq2v0e0eci2valevqr1b.apps.googleusercontent.com
 class App extends Component {
   render() {
@@ -29,6 +31,12 @@ class App extends Component {
             </Route>
             <Route path="/commercial" exact>
               <Commercial />
+            </Route>
+            <Route path="/creategame" exact>
+              <CreateGame />
+            </Route>
+            <Route path="/createplayer" exact>
+              <CreatePlayer />
             </Route>
 
             <LandingPage />

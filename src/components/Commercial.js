@@ -1,6 +1,8 @@
 import CreatePost from "./Posts/CreatePost";
 import GetPosts from "./Posts/GetPosts";
 import event from "../assets/event.png";
+import CreateGame from "./CardsChoice/CreateGame";
+import CreatePlayer from "./CardsChoice/CreatePlayer";
 
 function Commercial() {
   return (
@@ -9,12 +11,19 @@ function Commercial() {
         <img src={event} />
       </div>
 
-      <div className="col-start-4 col-end-6 row-start-2 row-end-2">
+      {/* <div className="col-start-4 col-end-6 row-start-2 row-end-2">
         <CreatePost />
       </div>
 
       <div className="col-start-1 col-end-4 row-start-2 row-end-2 ml-8 mr-8 mt-8">
         <GetPosts />
+      </div> */}
+      <div className="col-start-4 col-end-6 row-start-2 row-end-2">
+        <CreateGame />
+      </div>
+
+      <div className="col-start-1 col-end-4 row-start-2 row-end-2 ml-8 mr-8 mt-8">
+        <CreatePlayer />
       </div>
     </div>
   );
