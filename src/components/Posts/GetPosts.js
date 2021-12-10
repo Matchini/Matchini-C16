@@ -25,7 +25,7 @@ const GetPosts = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       getData();
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   }, []);
 
