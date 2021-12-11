@@ -16,13 +16,21 @@ body {
   font-size: 15px;
 }
 
-.sidenav{
-  left:-100%;
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidenav {
+  left: -100%;
   transition: all 1s;
 }
 
-.sidenav.active{
-left:0;
+.sidenav.active {
+  left: 0;
 }
 
 .top {
