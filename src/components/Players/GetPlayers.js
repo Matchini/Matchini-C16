@@ -85,7 +85,7 @@ const GetPlayers = () => {
           <div class="bg-white shadow-md rounded-lg border max-w-md p-4 sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
-                List of players
+                {e.fullName}
               </h3>
             </div>
             <div class="flow-root">
@@ -104,7 +104,7 @@ const GetPlayers = () => {
                     </div>
                     <div class="flex-1 min-w-0">
                       <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
-                        {e.fullName}
+                        {e.city}
                       </p>
                       <p class="text-sm text-gray-500 truncate dark:text-gray-400">
                         {e.role}
