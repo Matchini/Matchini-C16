@@ -16,14 +16,6 @@ body {
   font-size: 15px;
 }
 
-.hide-scroll-bar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.hide-scroll-bar::-webkit-scrollbar {
-  display: none;
-}
-
 .sidenav {
   left: -100%;
   transition: all 1s;
