@@ -16,13 +16,13 @@ body {
   font-size: 15px;
 }
 
-.sidenav{
-  left:-100%;
+.sidenav {
+  left: -100%;
   transition: all 1s;
 }
 
-.sidenav.active{
-left:0;
+.sidenav.active {
+  left: 0;
 }
 
 .top {
