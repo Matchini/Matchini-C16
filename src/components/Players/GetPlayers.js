@@ -39,7 +39,7 @@ const GetPlayers = () => {
                   <div class="flex items-center space-x-4">
                     <div class="flex-shrink-0">
                       <img
-                        class="h-6 w-6 rounded-full"
+                        class="h-8 w-8 rounded-full"
                         src={logo}
                         alt="image"
                       />
