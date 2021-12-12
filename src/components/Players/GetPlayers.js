@@ -23,7 +23,7 @@ const GetPlayers = () => {
         return (
           <div
             key={key}
-            class="sticky bg-white shadow-md rounded-lg border max-w-md ml-24 p-8 sm:p-5 dark:bg-gray-800 dark:border-gray-700"
+            class="sticky bg-white shadow-md rounded-lg border max-w-md ml-24 p-8 sm:p-4 dark:bg-gray-800 dark:border-gray-700"
           >
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
