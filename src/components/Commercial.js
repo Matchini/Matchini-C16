@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function Commercial() {
   return (
-    <div className="grid grid-cols-5 flex grid-rows-1 items-center ">
+    <div className="grid grid-cols-5  grid-rows-1 items-center ">
       <div className="col-start-2 col-end-5 row-start-1 row-end-1 mt-8">
         <img src={event} />
       </div>
