@@ -127,7 +127,7 @@ const CardsLand = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                       </svg>
-                      485K.9
+                      5K.9
                     </span>
                     <span className="cursor-not-allowed inline-flex items-center leading-none text-sm">
                       <svg
@@ -141,7 +141,7 @@ const CardsLand = () => {
                       >
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                       </svg>
-                      662
+                      162
                     </span>
                   </div>
                 </div>
@@ -156,23 +156,18 @@ const CardsLand = () => {
                 />
                 <div className="p-6 hover:bg-gray-700 hover:text-white transition duration-300 ease-in">
                   <h2 className="text-base font-medium text-green-700 mb-1">
-                    October 29, 2021
+                    Sousse 07 Dec, 2021
                   </h2>
-                  <h1 className="text-2xl font-semibold mb-3">
-                    Lakes are silent
-                  </h1>
+                  <h1 className="text-2xl font-semibold mb-3">Goal Keeper</h1>
                   <p className="leading-relaxed mb-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aperiam modi, expedita quos doloremque autem ipsum itaque
-                    incidunt ipsam reprehenderit fuga! Dolores quisquam eius cum
-                    accusamus?
+                    Goal keeper is missing guys tonight
                   </p>
                   <div className="flex items-center flex-wrap cursor-pointer ">
                     <a
                       className="cursor-pointer text-green-700 inline-flex items-center md:mb-2 lg:mb-0 "
                       onClick={() => history.push("/Register")}
                     >
-                      Read More
+                      Find()
                       <svg
                         className="w-4 h-4 ml-2"
                         viewBox="0 0 24 24"
@@ -199,7 +194,7 @@ const CardsLand = () => {
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                         <circle cx="12" cy="12" r="3"></circle>
                       </svg>
-                      784K
+                      4K
                     </span>
                     <span className="cursor-not-allowed text-gray-400 inline-flex items-center leading-none text-sm">
                       <svg
@@ -213,7 +208,7 @@ const CardsLand = () => {
                       >
                         <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
                       </svg>
-                      315
+                      115
                     </span>
                   </div>
                 </div>
