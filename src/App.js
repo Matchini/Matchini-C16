@@ -4,12 +4,12 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
 // import Nav from "./components/Nav";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Commercial from "./components/Commercial";
-import CreateGame from "./components/CardsChoice/CreateGame";
-import CreatePlayer from "./components/CardsChoice/CreatePlayer";
+// import CreateGame from "./components/CardsChoice/CreateGame";
+// import CreatePlayer from "./components/CardsChoice/CreatePlayer";
 import CommercialSec from "./components/CommercialSec";
 import CommercialThird from "./components/CommercialThird";
 // 215341427022-qpsrq4730unqiq2v0e0eci2valevqr1b.apps.googleusercontent.com

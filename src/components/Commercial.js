@@ -3,7 +3,6 @@
 import event from "../assets/event.png";
 import CreateGame from "./CardsChoice/CreateGame";
 import CreatePlayer from "./CardsChoice/CreatePlayer";
-import { useState } from "react";
 
 function Commercial() {
   return (
