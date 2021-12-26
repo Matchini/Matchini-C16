@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -13,48 +13,46 @@ import Commercial from "./components/Commercial";
 import CommercialSec from "./components/CommercialSec";
 import CommercialThird from "./components/CommercialThird";
 // 215341427022-qpsrq4730unqiq2v0e0eci2valevqr1b.apps.googleusercontent.com
-class App extends Component {
-  render() {
-    return (
-      <div className="bg-gray-100">
-        <Home />
+const App = () => {
+  return (
+    <div className="bg-gray-100">
+      <Home />
 
-        <Router>
-          <Switch>
-            <Route path="/Register" exact>
-              <Register />
-            </Route>
-            <Route path="/Login" exact>
-              <Login />
-            </Route>
+      <Router>
+        <Switch>
+          <Route path="/Register" exact>
+            <Register />
+          </Route>
+          <Route path="/Login" exact>
+            <Login />
+          </Route>
 
-            <Route path="/LandingPage" exact>
-              <LandingPage />
-            </Route>
-            <Route path="/commercial" exact>
-              <Commercial />
-            </Route>
-            <Route path="/commercialsec" exact>
-              <CommercialSec />
-            </Route>
-            <Route path="/commercialthird" exact>
-              <CommercialThird />
-            </Route>
-            {/* <Route path="/creategame" exact>
-              <CreateGame />
-            </Route>
-            <Route path="/createplayer" exact>
-              <CreatePlayer />
-            </Route> */}
-
+          <Route path="/LandingPage" exact>
             <LandingPage />
-            <Footer />
-          </Switch>
-        </Router>
-      </div>
-      // </div>
-    );
-  }
-}
+          </Route>
+          <Route path="/commercial" exact>
+            <Commercial />
+          </Route>
+          <Route path="/commercialsec" exact>
+            <CommercialSec />
+          </Route>
+          <Route path="/commercialthird" exact>
+            <CommercialThird />
+          </Route>
+          {/* <Route path="/creategame" exact>
+            <CreateGame />
+          </Route>
+          <Route path="/createplayer" exact>
+            <CreatePlayer />
+          </Route> */}
+
+          <LandingPage />
+          <Footer />
+        </Switch>
+      </Router>
+    </div>
+    // </div>
+  );
+};
 
 export default App;
