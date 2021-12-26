@@ -3,16 +3,14 @@ import CreateGame from "./CardsChoice/CreateGame";
 function Commercial() {
   return (
     <div>
-      <section class="container mx-auto px-6 p-10">
+      <section class="container mx-auto p-8  ">
         <div class="flex items-center flex-wrap mb-20">
           <div class="w-full md:w-1/2">
             <h4 class="text-3xl text-gray-800 font-bold mb-3">
-              Exercise Metric
+              Submit your game
             </h4>
             <p class="text-gray-600 mb-8">
-              Our Smart Health Monitoring Wristwatch is able to capture you
-              vitals while you exercise. You can create different category of
-              exercises and can track your vitals on the go.
+              Are you missing a player in your team ?
             </p>
           </div>
           <div class="w-full md:w-1/2">
@@ -25,11 +23,11 @@ function Commercial() {
             <CreatePlayer />
           </div>
           <div class="w-full md:w-1/2 pl-10">
-            <h4 class="text-3xl text-gray-800 font-bold mb-3">Reporting</h4>
+            <h4 class="text-3xl text-gray-800 font-bold mb-3">
+              Submit your profile
+            </h4>
             <p class="text-gray-600 mb-8">
-              Our Smart Health Monitoring Wristwatch can generate a
-              comprehensive report on your vitals depending on your settings
-              either daily, weekly, monthly, quarterly or yearly.
+              Are you a good player and you want to join a game ?
             </p>
           </div>
         </div>
