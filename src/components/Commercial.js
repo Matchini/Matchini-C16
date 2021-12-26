@@ -1,5 +1,5 @@
-import CreatePost from "./Posts/CreatePost";
-import GetPosts from "./Posts/GetPosts";
+// import CreatePost from "./Posts/CreatePost";
+// import GetPosts from "./Posts/GetPosts";
 import event from "../assets/event.png";
 import CreateGame from "./CardsChoice/CreateGame";
 import CreatePlayer from "./CardsChoice/CreatePlayer";
