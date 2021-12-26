@@ -4,10 +4,6 @@ function Commercial() {
   return (
     <div>
       <section class="container mx-auto px-6 p-10">
-        <div class="text-4xl font-bold text-center text-gray-800 mb-8">
-          <button>he</button>
-          <button>he</button>
-        </div>
         <div class="flex items-center flex-wrap mb-20">
           <div class="w-full md:w-1/2">
             <h4 class="text-3xl text-gray-800 font-bold mb-3">
