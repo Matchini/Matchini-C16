@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Login from "./Login";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useHistory } from "react-router-dom";
@@ -17,7 +16,7 @@ const Register = () => {
   const onSubmit = (data) => {
     axios
       .post("https://matchini.herokuapp.com/register", data)
-      .then((res) => {
+      .then(() => {
         setTimeout(() => {
           notify2();
         }, 1000);
@@ -370,14 +369,14 @@ const Register = () => {
                   </div>
                 </div>
                 <div className="flex justify-center mb-4">
-                <GoogleLogin
-                  className="bg-transparent"
-                  clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
-                  buttonText="Login with your google account"
-                  onSuccess={responseGoogleSuccess}
-                  onFailure={responseGoogleFail}
-                  cookiePolicy={"single_host_origin"}
-                />
+                  <GoogleLogin
+                    className="bg-transparent"
+                    clientId="106433618456-ui38ga6ajm39d35punapvavkk46fsmjc.apps.googleusercontent.com"
+                    buttonText="Login with your google account"
+                    onSuccess={responseGoogleSuccess}
+                    onFailure={responseGoogleFail}
+                    cookiePolicy={"single_host_origin"}
+                  />
                 </div>
                 <div className="flex justify-center mb-6">
                   <p> Already have an account? </p>
@@ -388,7 +387,6 @@ const Register = () => {
                     Login
                   </a>
                 </div>
-                
               </div>
               <ToastContainer />
             </div>

@@ -21,7 +21,7 @@ const CreatePost = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex lg:flex-col flex-col items-center bg-white border-2 py-8 px-4 mt-8 ml-24 mr-24">
+      <div className="flex lg:flex-col flex-col items-center bg-white py-8 px-4 mt-8 ml-24 mr-24 border-2">
         create game
         <div className="flex flex-col w-full">
           <label
@@ -104,12 +104,32 @@ const CreatePost = () => {
             {...register("number")}
           />
         </div>
-        <button className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">
+        {/* <button className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">
           submit
+        </button> */}
+        <button
+          href="javascript:;"
+          class="rounded-full bg-green-500 text-white hover:bg-white hover:text-green-500 hover:shadow-xl focus:outline-none w-full h-10 flex ml-auto transition duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="stroke-current m-auto"
+          >
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
         </button>
         <button
           onClick={() => history.push("/commercialthird")}
-          className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
+          className="mx-2 mt-4 w-full bg-green-500 transition duration-150 ease-in-out hover:bg-white hover:text-green-500 rounded text-white px-6 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600"
         >
           search players
         </button>
