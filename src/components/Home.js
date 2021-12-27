@@ -24,7 +24,7 @@ const Home = () => {
             <div>
               <div
                 className="text-white cursor-pointer"
-                onClick={(event) => (window.location.href = "/")}
+                onClick={() => (window.location.href = "/")}
               >
                 {" "}
                 <i className="fa fa-home"> </i> Home page
