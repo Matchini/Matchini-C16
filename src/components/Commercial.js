@@ -18,9 +18,3 @@ function Commercial() {
 }
 
 export default Commercial;
-
-{
-  /* <div classNameName="col-start-2 col-end-5 row-start-1 row-end-1 mt-8">
-<img src={event} />
-</div> */
-}
