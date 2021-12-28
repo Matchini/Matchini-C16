@@ -3,32 +3,13 @@ import CreateGame from "./CardsChoice/CreateGame";
 function Commercial() {
   return (
     <div>
-      <section className="container mx-auto p-8 flex justify-center items-center w-full md:w1/2  ">
-        <div className="flex items-center flex-wrap mb-20">
-          <div className="w-full md:w-1/2">
-            {/* <h4 className="text-3xl text-gray-800 font-bold mb-3">
-              Submit your game
-            </h4> */}
-            {/* <p className="text-gray-600 mb-8">
-              Are you missing a player in your team ?
-            </p> */}
-          </div>
+      <section>
+        <div className="flex items-center justify-center ">
           <div className="w-full md:w-1/2">
             <CreateGame />
           </div>
-        </div>
-
-        <div className="flex items-center flex-wrap mb-20">
           <div className="w-full md:w-1/2">
             <CreatePlayer />
-          </div>
-          <div className="w-full md:w-1/2 pl-10">
-            {/* <h4 className="text-3xl text-gray-800 font-bold mb-3">
-              Submit your profile
-            </h4> */}
-            {/* <p className="text-gray-600 mb-8">
-              Are you a good player and you want to join a game ?
-            </p> */}
           </div>
         </div>
       </section>
