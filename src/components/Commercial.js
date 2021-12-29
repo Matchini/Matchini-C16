@@ -5,10 +5,10 @@ function Commercial() {
     <div>
       <section>
         <div className="flex items-center justify-center ">
-          <div className="w-full md:w-1/2">
+          <div className="w-full ">
             <CreateGame />
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="w-full ">
             <CreatePlayer />
           </div>
         </div>
